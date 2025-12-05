@@ -1,9 +1,11 @@
 # 📚 Template Tesis UDINUS (Magister Teknik Informatika)
 
 ---
-## 👤 Created Adit Wicaksono — MTI.45
-email : aditwicaksono34@gmail.com, p31202402610@mhs.dinus.ac.id
-## 👤 Contribute Ismail Oktavian — MTI.45
+| **Role**    | **Name**                      |
+|-------------|-------------------------------|
+| **Author**  | Adit Wicaksono                |
+| **Contributor** | Ismail Oktavian, Jarot Muchtar |
+
 ---
 
 Template LaTeX untuk penulisan tesis Program Pascasarjana Magister Teknik Informatika, Universitas Dian Nuswantoro (UDINUS). Disusun mengikuti Panduan Tesis UDINUS (2020).
