@@ -48,6 +48,21 @@ sudo apt install ttf-mscorefonts-installer
 1. Unduh dan instal [MiKTeX](https://miktex.org/download)
 2. Font Times New Roman sudah tersedia secara default
 
+### Instalasi di MacOS
+
+#### install via terminal, menggunakan Brew
+
+```bash
+brew install --cask mactex
+```
+Semua paket sudah termasuk
+
+#### Install via MacTex
+
+1. Buka situs resmi LaTeX: latex-project.org/get, Pilih distribusi MacTeX (sekitar 4 GB, karena sudah termasuk paket lengkap).
+2. Jalankan file `.pkh` hasil download, Ikuti setup biasa
+3. Integrasi dengan VScode + LateX Workshop
+   
 ---
 
 ## 📁 Struktur Folder
