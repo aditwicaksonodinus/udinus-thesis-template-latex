@@ -3,7 +3,7 @@
 ---
 ## 👤 Created Adit Wicaksono — MTI.45
 email : aditwicaksono34@gmail.com, p31202402610@mhs.dinus.ac.id
-
+## 👤 Contribute Ismail Oktavian — MTI.45
 ---
 
 Template LaTeX untuk penulisan tesis Program Pascasarjana Magister Teknik Informatika, Universitas Dian Nuswantoro (UDINUS). Disusun mengikuti Panduan Tesis UDINUS (2020).
