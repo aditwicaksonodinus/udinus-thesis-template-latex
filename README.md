@@ -315,7 +315,7 @@ Jika menemukan bug atau ingin menambahkan fitur, silakan berkontribusi melalui G
 
 ```bash
 # Clone repository
-git clone https://github.com/username/udinus-thesis-template.git
+git clone github.com/aditwicaksonodinus/udinus-thesis-template-latex/
 
 # Buat branch baru untuk fitur/perbaikan
 git checkout -b fitur-baru
