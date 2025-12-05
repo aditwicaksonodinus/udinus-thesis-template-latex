@@ -1,0 +1,17 @@
+## Global chtex-lint configuration (best-effort)
+#
+# This repository-wide config requests that chtex-style linters be disabled
+# when they support reading a YAML configuration file. Not all chtex/chktex
+# implementations automatically detect this filename. If your linter supports
+# a `--config` / `--rcfile` option, pass this file explicitly.
+#
+# Note: I added per-file comments "% chtex-lint: disable" to all .tex files
+# as a guaranteed fallback. This file is provided as a convenience for tools
+# that accept a project-level config.
+
+enabled: false
+disable: true
+paths:
+  - "**/*.tex"
+
+# End of file

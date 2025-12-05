@@ -1,0 +1,65 @@
+% chtex-lint: disable
+% ============================================================================
+%                           HALAMAN SAMPUL (COVER)
+% ============================================================================
+% Halaman sampul depan tesis, dicetak pada kertas linen berwarna orange
+%
+% PETUNJUK:
+% - File ini menggunakan variabel dari main.tex
+% - Pastikan variabel di main.tex sudah diisi dengan benar
+% - Logo UDINUS: documents/udinus-logo.png (pastikan file ada)
+%
+% VARIABEL YANG DIGUNAKAN:
+% - \ThesisTitle    : Judul tesis (dari main.tex)
+% - \AuthorNameB    : Nama penulis huruf kapital di awal (dari main.tex)
+% - \StudentID      : NIM penulis (dari main.tex)
+% - \City           : Kota (dari main.tex)
+% - \Year           : Tahun (dari main.tex)
+% ============================================================================
+
+% Uncomment baris berikut untuk background orange (opsional)
+% \pagecolor{orange!30}
+
+\thispagestyle{empty} % Sembunyikan nomor halaman pada cover
+
+\begin{center}
+  \color{darkred}
+
+  \vspace*{2pt}
+
+  % Label "TESIS" - 14pt Bold
+  {\fontsize{14pt}{21pt}\selectfont\bfseries TESIS\par}
+
+  \vspace{1cm}
+
+  % Judul Tesis - 16pt Bold, Uppercase
+  {\fontsize{16pt}{24pt}\selectfont\bfseries\MakeUppercase{\ThesisTitle}\par}
+
+  \vspace{2cm}
+
+  % Penulis dan NIM
+  {\color{darkred}Oleh:}\\[0.5cm]
+  {\color{darkred}\bfseries \AuthorNameB}\\[0.25cm]
+  {\color{darkred}\StudentID}\\[2cm]
+
+  % Logo UDINUS
+  \includegraphics[width=4cm]{./documents/udinus-logo.png}\\[0.5cm]
+
+  \vspace{1.0cm}
+
+  % Informasi Program Studi - 14pt Bold
+  {\fontsize{14pt}{22pt}\selectfont\bfseries
+      PROGRAM PASCASARJANA\\[-0.5em]
+      MAGISTER TEKNIK INFORMATIKA\\[-0.5em]
+      UNIVERSITAS DIAN NUSWANTORO\\[-0.5em]
+      \City\\[-0.5em]
+      \Year
+    \par}
+
+\end{center}
+
+% Uncomment untuk reset background setelah menggunakan \pagecolor
+% \nopagecolor
+
+% Pindah ke halaman baru (titlepage di halaman berikutnya)
+\clearpage

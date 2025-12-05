@@ -1,0 +1,26 @@
+# LaTeX auxiliary files - only allow in build/ directory
+/*.aux
+/*.bcf
+/*.bbl
+/*.blg
+/*.lof
+/*.lot
+/*.log
+/*.out
+/*.pdf
+/*.run.xml
+/*.synctex.gz
+/*.toc
+/*.fdb_latexmk
+/*.fls
+/*.idx
+/*.ind
+/*.ilg
+/*.glg
+/*.glo
+/*.gls
+/*.ist
+
+# Keep build directory but ignore all contents except PDF
+build/*
+!build/.gitkeep

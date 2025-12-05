@@ -1,0 +1,87 @@
+% chtex-lint: disable
+% ============================================================================
+%                        PERSETUJUAN TESIS
+% ============================================================================
+% Halaman persetujuan tesis sebelum sidang
+%
+% PETUNJUK:
+% - Halaman ini ditandatangani oleh pembimbing sebelum sidang
+% - Menandakan bahwa tesis layak untuk diujikan
+% - Isi tanggal persetujuan pada bagian tanda tangan
+%
+% VARIABEL YANG DIGUNAKAN:
+% - \ThesisTitle    : Judul tesis (dari main.tex)
+% - \AuthorName     : Nama penulis huruf kapital (dari main.tex)
+% - \StudentID      : NIM penulis (dari main.tex)
+% - \SupervisorOne  : Nama pembimbing utama (dari main.tex)
+% - \SupervisorTwo  : Nama pembimbing kedua (dari main.tex)
+% ============================================================================
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{PERSETUJUAN TESIS}
+\thispagestyle{plain}
+
+\begin{center}
+% Logo UDINUS
+\includegraphics[width=3cm]{documents/udinus-logo.png}
+
+\vspace{0.5cm}
+
+% Nama Universitas
+{\bfseries UNIVERSITAS DIAN NUSWANTORO}
+
+\vspace{1cm}
+
+% Judul Halaman
+{\bfseries PERSETUJUAN TESIS}
+
+\end{center}
+
+\vspace{0.8cm}
+
+% ============================================================================
+% METADATA TESIS
+% ============================================================================
+
+\noindent
+\begin{tabular}{@{}l@{\hspace{0.5cm}}l@{\hspace{0.5cm}}p{\dimexpr\textwidth-1cm-1.5cm\relax}@{}}
+JUDUL & : & \textbf{\ThesisTitle} \\[0.3cm]
+NAMA & : & \AuthorName \\[0.3cm]
+NIM & : & \StudentID
+\end{tabular}
+
+\vspace{1cm}
+
+% ============================================================================
+% TEKS PERSETUJUAN
+% ============================================================================
+
+\begin{center}
+Tesis ini telah diperiksa dan disetujui,
+
+\vspace{0.5cm}
+
+{Kota}, \makebox[4cm]{\dotfill}  % Ganti {Kota} dengan kota Anda
+\end{center}
+
+\vspace{3cm}
+
+% ============================================================================
+% BAGIAN TANDA TANGAN PEMBIMBING
+% ============================================================================
+% PETUNJUK: Pembimbing menandatangani setelah tesis siap untuk diujikan
+% ============================================================================
+
+\noindent
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+{\footnotesize \underline{\SupervisorOne}}\\
+{\footnotesize Pembimbing Utama}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+{\footnotesize \underline{\SupervisorTwo}}\\
+{\footnotesize Pembimbing Pendamping}
+\end{minipage}

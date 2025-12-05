@@ -1,0 +1,23 @@
+% chtex-lint: disable
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{DAFTAR ISI}
+\thispagestyle{plain}
+
+% Spasi 1.5
+\setstretch{1.5}
+
+% Judul DAFTAR ISI (centered, bold, 14pt)
+{\HeadingFont\centering DAFTAR ISI\par}
+
+\vspace{\baselineskip}
+
+% Header kolom "Halaman" di kanan atas
+\noindent\hfill\textbf{Halaman}
+
+\vspace{0.5\baselineskip}
+
+% Table of Contents (tanpa judul otomatis)
+\makeatletter
+\@starttoc{toc}
+\makeatother

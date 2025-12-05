@@ -1,0 +1,700 @@
+@inproceedings{zhang_improving_2025,
+  address    = {Palma, Spain},
+  title      = {Improving student engagement with the mathspring intelligent tutoring system: a reinforcement learning approach},
+  shorttitle = {Improving student engagement with the mathspring intelligent tutoring system},
+  url        = {https://library.iated.org/view/ZHANG2025IMP},
+  doi        = {10.21125/edulearn.2025.2341},
+  urldate    = {2025-09-30},
+  author     = {Zhang, Boming and Arroyo, Ivon},
+  month      = jun,
+  year       = {2025},
+  pages      = {9054--9063}
+}
+
+@article{tan_self-adaptive_2017,
+  title    = {Self-{Adaptive} {Streaming} {Big} {Data} {Learning} {Algorithm} {Based} on {Incremental} {Tangent} {Space} {Alignment}},
+  volume   = {54},
+  issn     = {10001239},
+  url      = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85040709980&doi=10.7544%2Fissn1000-1239.2017.20160712&partnerID=40&md5=acd183edefd33f4cd39f1ad9ef03819e},
+  doi      = {10.7544/issn1000-1239.2017.20160712},
+  language = {Chinese},
+  number   = {11},
+  journal  = {Jisuanji Yanjiu yu Fazhan/Computer Research and Development},
+  author   = {Tan, C. and Ji, G. and Zhao, B.},
+  year     = {2017},
+  note     = {Publisher: Science Press shengtaixuebao@mail.rcees.ac.cn},
+  keywords = {Big data streams, Incremental tangent space, Manifold learning, Nonlinear dimension reduction, Self-adaptive},
+  pages    = {2547--2557}
+}
+
+@article{chrysafiadi_adaptive_2023,
+  title    = {An {Adaptive} {Learning} {Environment} for {Programming} {Based} on {Fuzzy} {Logic} and {Machine} {Learning}},
+  volume   = {32},
+  issn     = {17936349; 02182130},
+  url      = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85169432481&doi=10.1142%2FS0218213023600114&partnerID=40&md5=96dd3008b664df18634d213da1ed7e42},
+  doi      = {10.1142/S0218213023600114},
+  language = {English},
+  number   = {5},
+  journal  = {International Journal on Artificial Intelligence Tools},
+  author   = {Chrysafiadi, K. and Virvou, M. and Tsihrintzis, G.A. and Hatzilygeroudis, I.},
+  year     = {2023},
+  note     = {Publisher: World Scientific},
+  keywords = {Adaptivity, fuzzy logic, intelligent tutoring system, k-nearest neighbor algorithm, machine learning}
+}
+
+@inproceedings{bhat_personalised_2019,
+  title     = {A {Personalised} {Approach} to {Adaptive} {Tutoring} using {Machine} {Learning} and {Natural} {Language} {Processing}},
+  volume    = {2019January},
+  url       = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85084474348&doi=10.1109%2FIBSSC47189.2019.8973062&partnerID=40&md5=8ec678eb229aa366a64e98f5f38474ae},
+  doi       = {10.1109/IBSSC47189.2019.8973062},
+  language  = {English},
+  publisher = {Institute of Electrical and Electronics Engineers Inc.},
+  author    = {Bhat, S. and Nair, S.S. and Kadur, S. and Srikanth H, R.},
+  year      = {2019},
+  keywords  = {FP-Growth algorithm, Genetic Algorithms, POS-tagging, Syntactic Parsing, TextRank, TF-IDF Scores, Weighted Support Vector Machines}
+}
+
+@inproceedings{kim_meta-learning_2022,
+  title     = {Meta-{Learning} for {Online} {Update} of {Recommender} {Systems}},
+  volume    = {36},
+  url       = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85140833767&doi=10.1609%2Faaai.v36i4.20324&partnerID=40&md5=5eb825b2a4caefb36ab97ce9db0316b0},
+  doi       = {10.1609/aaai.v36i4.20324},
+  language  = {English},
+  publisher = {Association for the Advancement of Artificial Intelligence},
+  author    = {Kim, M. and Song, H. and Shin, Y. and Park, D. and Shin, K. and Lee, J.-G.},
+  year      = {2022},
+  pages     = {4065--4074}
+}
+
+@article{Rosa_Destian_Agustian_Wahyudin_2024,
+  title   = {Inovasi Model dan Strategi Pembelajaran dalam Implementasi Kurikulum Merdeka: Inovasi Model dan Strategi Pembelajaran dalam Implementasi Kurikulum Merdeka},
+  volume  = {5},
+  url     = {https://jer.or.id/index.php/jer/article/view/1153},
+  doi     = {10.37985/jer.v5i3.1153},
+  number  = {3},
+  journal = {Journal of Education Research},
+  author  = {Rosa, Elisa and Destian, Rangga and Agustian, Andy and Wahyudin, Wahyudin},
+  year    = {2024},
+  pages   = {2608–2617}
+}
+
+@article{Hadi_Siswanto_Kintoko_2025,
+  title   = {Evaluasi dan Analisis Penerapan Kurikulum Merdeka di Sekolah Menengah Atas},
+  volume  = {22},
+  url     = {https://jlmp.kemdikbud.go.id/index.php/jlmp/article/view/156},
+  doi     = {10.54124/jlmp.v22i1.156},
+  number  = {1},
+  journal = {Jurnal Lingkar Mutu Pendidikan},
+  author  = {Hadi Siswanto, Deny and Kintoko},
+  year    = {2025},
+  pages   = {27–34}
+}
+
+@article{creswell_2009,
+  title  = {Research designs. Qualitative, quantitative, and mixed methods approaches},
+  author = {Creswell, John W},
+  year   = {2009}
+}
+
+@article{bangor_2009_determining,
+  title     = {Determining what individual SUS scores mean: Adding an adjective rating scale},
+  author    = {Bangor, Aaron and Kortum, Philip and Miller, James},
+  journal   = {Journal of usability studies},
+  volume    = {4},
+  number    = {3},
+  pages     = {114--123},
+  year      = {2009},
+  publisher = {Usability Professionals' Association Bloomingdale, IL}
+}
+
+@book{field_discovering,
+  title     = {Discovering statistics using IBM SPSS statistics},
+  author    = {Field, Andy},
+  year      = {2024},
+  publisher = {Sage publications limited}
+}
+
+@article{brooke_1996_sus,
+  title     = {SUS-A quick and dirty usability scale},
+  author    = {Brooke, John},
+  journal   = {Usability evaluation in industry},
+  volume    = {189},
+  number    = {194},
+  pages     = {4--7},
+  year      = {1996},
+  publisher = {London, England}
+}
+
+@article{pintrich_2002_motivation,
+  title   = {Motivation in education: Theory, research, and applications},
+  author  = {Pintrich, Paul R and Schunk, Dale H},
+  journal = {(No Title)},
+  year    = {2002}
+}
+
+@article{sugiyono_2017_metode,
+  title   = {Metode penelitian bisnis: pendekatan kuantitatif, kualitatif, kombinasi, dan R\&D},
+  author  = {Sugiyono, Prof Dr},
+  journal = {Penerbit CV. Alfabeta: Bandung},
+  volume  = {225},
+  number  = {87},
+  year    = {2017}
+}
+
+@article{nasution_2023_konsep,
+  title   = {Konsep dan implementasi kurikulum merdeka},
+  author  = {Nasution, Abdul Fattah and Ningsih, Setia and Silva, Mona Febrica and Suharti, Leli and Harahap, Jekson Parulian},
+  journal = {COMPETITIVE: Journal of Education},
+  volume  = {2},
+  number  = {3},
+  pages   = {201--211},
+  year    = {2023}
+}
+
+@book{gall_1996_educational,
+  title     = {Educational research: An introduction},
+  author    = {Gall, Meredith Damien and Borg, Walter R and Gall, Joyce P},
+  year      = {1996},
+  publisher = {Longman Publishing}
+}
+
+
+@book{Woolf_2008,
+  author = {Woolf, Beverly},
+  year   = {2008},
+  month  = {01},
+  title  = {Building Intelligent Interactive Tutors, Student-Centered Strategies for Revolutionizing E-Learning}
+}
+
+@article{Roll_Wylie_2016,
+  author  = {Roll, Ido and Wylie, Ruth},
+  year    = {2016},
+  month   = {02},
+  pages   = {},
+  title   = {Evolution and Revolution in Artificial Intelligence in Education},
+  volume  = {26},
+  journal = {International Journal of Artificial Intelligence in Education},
+  doi     = {10.1007/s40593-016-0110-3}
+}
+
+@article{Sweller_1988,
+  title   = {Cognitive load during problem solving: Effects on learning},
+  journal = {Cognitive Science},
+  volume  = {12},
+  number  = {2},
+  pages   = {257-285},
+  year    = {1988},
+  issn    = {0364-0213},
+  doi     = {https://doi.org/10.1016/0364-0213(88)90023-7},
+  url     = {https://www.sciencedirect.com/science/article/pii/0364021388900237},
+  author  = {John Sweller}
+}
+
+@inproceedings{Lamsiyah_2024,
+  author    = {Lamsiyah, Salima and El Mahdaouy, Abdelkader and Nourbakhsh, Aria and Schommer, Christoph},
+  title     = {Fine Tuning Large Language Model with Reinforcement Learning for Educational Question Generation},
+  year      = {2024},
+  isbn      = {978-3-031-64301-9},
+  publisher = {Springer-Verlag},
+  address   = {Berlin, Heidelberg},
+  url       = {https://doi.org/10.1007/978-3-031-64302-6_30},
+  doi       = {10.1007/978-3-031-64302-6_30},
+  pages     = {424–438},
+  numpages  = {15},
+  keywords  = {Educational Question Generation, Large Language Model, Google FLAN-T5, Reinforcement Learning, Self-Critical Sequence Training}
+}
+
+@article{Kasneci_2023,
+  title    = {ChatGPT for good? On opportunities and challenges of large language models for education},
+  journal  = {Learning and Individual Differences},
+  volume   = {103},
+  pages    = {102274},
+  year     = {2023},
+  issn     = {1041-6080},
+  doi      = {https://doi.org/10.1016/j.lindif.2023.102274},
+  url      = {https://www.sciencedirect.com/science/article/pii/S1041608023000195},
+  author   = {Enkelejda Kasneci and Kathrin Sessler and Stefan Küchemann and Maria Bannert and Daryna Dementieva and Frank Fischer and Urs Gasser and Georg Groh and Stephan Günnemann and Eyke Hüllermeier and Stephan Krusche and Gitta Kutyniok and Tilman Michaeli and Claudia Nerdel and Jürgen Pfeffer and Oleksandra Poquet and Michael Sailer and Albrecht Schmidt and Tina Seidel and Matthias Stadler and Jochen Weller and Jochen Kuhn and Gjergji Kasneci},
+  keywords = {Large language models, Artificial intelligence, Education, Educational technologies}
+}
+
+
+@article{afsar_reinforcement_2021,
+  title   = {Reinforcement learning based recommender systems: {A} survey},
+  doi     = {doi.org/10.48550/arXiv.2101.06286},
+  journal = {arXiv},
+  author  = {Afsar, M. Mehdi and Crump, Trafford and Far, Behrouz},
+  month   = jan,
+  year    = {2021},
+  note    = {arXiv: 2101.06286}
+}
+
+
+@article{papamitsiou_learning_2014,
+  title   = {Learning {Analytics} and {Educational} {Data} {Mining} in {Practice}: {A} {Systematic} {Literature} {Review} of {Empirical} {Evidence}},
+  volume  = {17},
+  journal = {Educational Technology \& Society},
+  author  = {Papamitsiou, Zacharoula and Economides, Anastasios},
+  month   = oct,
+  year    = {2014},
+  pages   = {49--64}
+}
+
+
+@article{bennane_adaptive_2013,
+  title   = {Adaptive {Educational} {Software} by {Applying} {Reinforcement} {Learning}},
+  volume  = {12},
+  issn    = {1648-5831},
+  doi     = {10.15388/infedu.2013.02},
+  number  = {1},
+  journal = {Informatics in Education},
+  author  = {Bennane, Abdellah},
+  month   = apr,
+  year    = {2013},
+  pages   = {13--28}
+}
+
+@article{li_learning_2024,
+  title   = {Learning {Path} {Recommendation} {Based} on {Reinforcement} {Learning}.},
+  volume  = {32},
+  number  = {9},
+  journal = {Engineering Letters},
+  author  = {Li, Ji and Yu, Simiao and Zhang, Tiancheng},
+  year    = {2024}
+}
+
+@inproceedings{tang_deep_2016,
+  address   = {New York, NY, USA},
+  title     = {Deep {Neural} {Networks} and {How} {They} {Apply} to {Sequential} {Education} {Data}},
+  isbn      = {978-1-4503-3726-7},
+  doi       = {10.1145/2876034.2893444},
+  booktitle = {Proceedings of the {Third} (2016) {ACM} {Conference} on {Learning} @ {Scale}},
+  publisher = {ACM},
+  author    = {Tang, Steven and Peterson, Joshua C. and Pardos, Zachary A.},
+  month     = apr,
+  year      = {2016},
+  pages     = {321--324}
+}
+
+@article{chen_recommendation_2018,
+  title    = {Recommendation {System} for {Adaptive} {Learning}},
+  volume   = {42},
+  issn     = {0146-6216},
+  doi      = {10.1177/0146621617697959},
+  abstract = {{\textless}p{\textgreater}An adaptive learning system aims at providing instruction tailored to the current status of a learner, differing from the traditional classroom experience. The latest advances in technology make adaptive learning possible, which has the potential to provide students with high-quality learning benefit at a low cost. A key component of an adaptive learning system is a recommendation system, which recommends the next material (video lectures, practices, and so on, on different skills) to the learner, based on the psychometric assessment results and possibly other individual characteristics. An important question then follows: How should recommendations be made? To answer this question, a mathematical framework is proposed that characterizes the recommendation process as a Markov decision problem, for which decisions are made based on the current knowledge of the learner and that of the learning materials. In particular, two plain vanilla systems are introduced, for which the optimal recommendation at each stage can be obtained analytically.{\textless}/p{\textgreater}},
+  number   = {1},
+  journal  = {Applied Psychological Measurement},
+  author   = {Chen, Yunxiao and Li, Xiaoou and Liu, Jingchen and Ying, Zhiliang},
+  month    = jan,
+  year     = {2018},
+  pages    = {24--41}
+}
+
+@article{wang_supervised_2018,
+  title    = {Supervised {Reinforcement} {Learning} with {Recurrent} {Neural} {Network} for {Dynamic} {Treatment} {Recommendation}},
+  abstract = {Dynamic treatment recommendation systems based on large-scale electronic health records (EHRs) become a key to successfully improve practical clinical outcomes. Prior relevant studies recommend treatments either use supervised learning (e.g. matching the indicator signal which denotes doctor prescriptions), or reinforcement learning (e.g. maximizing evaluation signal which indicates cumulative reward from survival rates). However, none of these studies have considered to combine the benefits of supervised learning and reinforcement learning. In this paper, we propose Supervised Reinforcement Learning with Recurrent Neural Network (SRL-RNN), which fuses them into a synergistic learning framework. Specifically, SRL-RNN applies an off-policy actor-critic framework to handle complex relations among multiple medications, diseases and individual characteristics. The "actor" in the framework is adjusted by both the indicator signal and evaluation signal to ensure effective prescription and low mortality. RNN is further utilized to solve the Partially-Observed Markov Decision Process (POMDP) problem due to the lack of fully observed states in real world applications. Experiments on the publicly real-world dataset, i.e., MIMIC-3, illustrate that our model can reduce the estimated mortality, while providing promising accuracy in matching doctors' prescriptions.},
+  author   = {Wang, Lu and Zhang, Wei and He, Xiaofeng and Zha, Hongyuan},
+  month    = jul,
+  year     = {2018},
+  note     = {arXiv: 1807.01473}
+}
+
+@article{fahad_mon_reinforcement_2023,
+  title    = {Reinforcement {Learning} in {Education}: {A} {Literature} {Review}},
+  volume   = {10},
+  issn     = {2227-9709},
+  doi      = {10.3390/informatics10030074},
+  abstract = {{\textless}p{\textgreater}The utilization of reinforcement learning (RL) within the field of education holds the potential to bring about a significant shift in the way students approach and engage with learning and how teachers evaluate student progress. The use of RL in education allows for personalized and adaptive learning, where the difficulty level can be adjusted based on a student’s performance. As a result, this could result in heightened levels of motivation and engagement among students. The aim of this article is to investigate the applications and techniques of RL in education and determine its potential impact on enhancing educational outcomes. It compares the various policies induced by RL with baselines and identifies four distinct RL techniques: the Markov decision process, partially observable Markov decision process, deep RL network, and Markov chain, as well as their application in education. The main focus of the article is to identify best practices for incorporating RL into educational settings to achieve effective and rewarding outcomes. To accomplish this, the article thoroughly examines the existing literature on using RL in education and its potential to advance educational technology. This work provides a thorough analysis of the various techniques and applications of RL in education to answer questions related to the effectiveness of RL in education and its future prospects. The findings of this study will provide researchers with a benchmark to compare the usefulness and effectiveness of commonly employed RL algorithms and provide direction for future research in education.{\textless}/p{\textgreater}},
+  number   = {3},
+  journal  = {Informatics},
+  author   = {Fahad Mon, Bisni and Wasfi, Asma and Hayajneh, Mohammad and Slim, Ahmad and Abu Ali, Najah},
+  month    = sep,
+  year     = {2023},
+  pages    = {74}
+}
+
+
+@article{kaelbling_reinforcement_1996,
+  title      = {Reinforcement {Learning}: {A} {Survey}},
+  volume     = {4},
+  issn       = {1076-9757},
+  shorttitle = {Reinforcement {Learning}},
+  url        = {https://www.jair.org/index.php/jair/article/view/10166},
+  doi        = {10.1613/jair.301},
+  abstract   = {This paper surveys the field of reinforcement learning from    a computer-science perspective. It is written to be accessible to    researchers familiar with machine learning.  Both the historical basis    of the field and a broad selection of current work are summarized.    Reinforcement learning is the problem faced by an agent that learns    behavior through trial-and-error interactions with a dynamic    environment.  The work described here has a resemblance to work in    psychology, but differs considerably in the details and in the use of    the word ``reinforcement.''  The paper discusses central issues of    reinforcement learning, including trading off exploration and    exploitation, establishing the foundations of the field via Markov    decision theory, learning from delayed reinforcement, constructing    empirical models to accelerate learning, making use of generalization    and hierarchy, and coping with hidden state.  It concludes with a    survey of some implemented systems and an assessment of the practical    utility of current methods for reinforcement learning.},
+  urldate    = {2025-09-30},
+  journal    = {Journal of Artificial Intelligence Research},
+  author     = {Kaelbling, L. P. and Littman, M. L. and Moore, A. W.},
+  month      = may,
+  year       = {1996},
+  pages      = {237--285},
+  file       = {Full Text:files/317/Kaelbling et al. - 1996 - Reinforcement Learning A Survey.pdf:application/pdf}
+}
+
+@article{paas_cognitive-load_2020,
+  title      = {Cognitive-{Load} {Theory}: {Methods} to {Manage} {Working} {Memory} {Load} in the {Learning} of {Complex} {Tasks}},
+  volume     = {29},
+  issn       = {0963-7214, 1467-8721},
+  shorttitle = {Cognitive-{Load} {Theory}},
+  url        = {https://journals.sagepub.com/doi/10.1177/0963721420922183},
+  doi        = {10.1177/0963721420922183},
+  abstract   = {Cognitive-load researchers attempt to engineer the instructional control of cognitive load by designing methods that substitute productive for unproductive cognitive load. This article highlights proven and new methods to achieve this instructional control by focusing on the cognitive architecture used by cognitive-load theory and aspects of the learning task, the learner, and the learning environment.},
+  language   = {en},
+  number     = {4},
+  urldate    = {2025-09-30},
+  journal    = {Current Directions in Psychological Science},
+  author     = {Paas, Fred and Van Merriënboer, Jeroen J. G.},
+  month      = aug,
+  year       = {2020},
+  pages      = {394--398},
+  file       = {Full Text:files/318/Paas and Van Merriënboer - 2020 - Cognitive-Load Theory Methods to Manage Working Memory Load in the Learning of Complex Tasks.pdf:application/pdf}
+}
+
+
+@article{tang_trends_2023,
+  title      = {Trends in artificial intelligence-supported e-learning: a systematic review and co-citation network analysis (1998–2019)},
+  volume     = {31},
+  issn       = {1049-4820, 1744-5191},
+  shorttitle = {Trends in artificial intelligence-supported e-learning},
+  url        = {https://www.tandfonline.com/doi/full/10.1080/10494820.2021.1875001},
+  doi        = {10.1080/10494820.2021.1875001},
+  language   = {en},
+  number     = {4},
+  urldate    = {2025-09-30},
+  journal    = {Interactive Learning Environments},
+  author     = {Tang, Kai-Yu and Chang, Ching-Yi and Hwang, Gwo-Jen},
+  month      = may,
+  year       = {2023},
+  pages      = {2134--2152}
+}
+
+@book{fosnot_fosnot_2013,
+  title     = {Fosnot, {Catherine} {Twomey}. {Constructivism}: {Theory}, perspectives, and practice.},
+  publisher = {Teachers College Press.},
+  author    = {Fosnot, C. T.},
+  year      = {2013}
+}
+
+
+@inproceedings{liu_towards_2018,
+  address   = {Wollongong, NSW},
+  title     = {Towards {Smart} {Educational} {Recommendations} with {Reinforcement} {Learning} in {Classroom}},
+  isbn      = {978-1-5386-6522-0},
+  url       = {https://ieeexplore.ieee.org/document/8615217/},
+  doi       = {10.1109/TALE.20#18.8615217},
+  urldate   = {2025-09-30},
+  booktitle = {2018 {IEEE} {International} {Conference} on {Teaching}, {Assessment}, and {Learning} for {Engineering} ({TALE})},
+  publisher = {IEEE},
+  author    = {Liu, Su and Chen, Ye and Huang, Hui and Xiao, Liang and Hei, Xiaojun},
+  month     = dec,
+  year      = {2018},
+  pages     = {1079--1084}
+}
+
+@article{kinder_effects_2025,
+  title      = {Effects of adaptive feedback generated by a large language model: {A} case study in teacher education},
+  volume     = {8},
+  issn       = {2666920X},
+  shorttitle = {Effects of adaptive feedback generated by a large language model},
+  url        = {https://linkinghub.elsevier.com/retrieve/pii/S2666920X24001528},
+  doi        = {10.1016/j.caeai.2024.100349},
+  language   = {en},
+  urldate    = {2025-09-30},
+  journal    = {Computers and Education: Artificial Intelligence},
+  author     = {Kinder, Annette and Briese, Fiona J. and Jacobs, Marius and Dern, Niclas and Glodny, Niels and Jacobs, Simon and Leßmann, Samuel},
+  month      = jun,
+  year       = {2025},
+  pages      = {100349}
+}
+
+@article{riedmann_reinforcement_2025,
+  title      = {Reinforcement {Learning} in {Education}: {A} {Systematic} {Literature} {Review}},
+  issn       = {1560-4292, 1560-4306},
+  shorttitle = {Reinforcement {Learning} in {Education}},
+  url        = {https://link.springer.com/10.1007/s40593-025-00494-6},
+  doi        = {10.1007/s40593-025-00494-6},
+  language   = {en},
+  urldate    = {2025-09-30},
+  journal    = {International Journal of Artificial Intelligence in Education},
+  author     = {Riedmann, Anna and Schaper, Philipp and Lugrin, Birgit},
+  month      = jul,
+  year       = {2025}
+}
+
+@misc{wang_large_2024,
+  title      = {Large {Language} {Models} for {Education}: {A} {Survey} and {Outlook}},
+  shorttitle = {Large {Language} {Models} for {Education}},
+  url        = {http://arxiv.org/abs/2403.18105},
+  doi        = {10.48550/arXiv.2403.18105},
+  urldate    = {2025-09-30},
+  publisher  = {arXiv},
+  author     = {Wang, Shen and Xu, Tianlong and Li, Hang and Zhang, Chaoli and Liang, Joleen and Tang, Jiliang and Yu, Philip S. and Wen, Qingsong},
+  month      = apr,
+  year       = {2024},
+  note       = {arXiv:2403.18105 [cs]},
+  keywords   = {Computer Science - Artificial Intelligence, Computer Science - Computation and Language}
+}
+
+@misc{havrilla_teaching_2024,
+  title     = {Teaching {Large} {Language} {Models} to {Reason} with {Reinforcement} {Learning}},
+  url       = {http://arxiv.org/abs/2403.04642},
+  doi       = {10.48550/arXiv.2403.04642},
+  urldate   = {2025-09-30},
+  publisher = {arXiv},
+  author    = {Havrilla, Alex and Du, Yuqing and Raparthy, Sharath Chandra and Nalmpantis, Christoforos and Dwivedi-Yu, Jane and Zhuravinskyi, Maksym and Hambro, Eric and Sukhbaatar, Sainbayar and Raileanu, Roberta},
+  month     = mar,
+  year      = {2024},
+  note      = {arXiv:2403.04642 [cs]},
+  keywords  = {Computer Science - Machine Learning},
+  file      = {Preprint PDF:files/327/Havrilla et al. - 2024 - Teaching Large Language Models to Reason with Reinforcement Learning.pdf:application/pdf;Snapshot:files/326/2403.html:text/html}
+}
+
+@article{mamo_higher_2024,
+  title      = {Higher {Education} {Faculty} {Perceptions} of {ChatGPT} and the {Influencing} {Factors}: {A} {Sentiment} {Analysis} of {X}},
+  volume     = {68},
+  issn       = {8756-3894, 1559-7075},
+  shorttitle = {Higher {Education} {Faculty} {Perceptions} of {ChatGPT} and the {Influencing} {Factors}},
+  url        = {https://link.springer.com/10.1007/s11528-024-00954-1},
+  doi        = {10.1007/s11528-024-00954-1},
+  language   = {en},
+  number     = {3},
+  urldate    = {2025-09-30},
+  journal    = {TechTrends},
+  author     = {Mamo, Yoseph and Crompton, Helen and Burke, Diane and Nickel, Christine},
+  month      = may,
+  year       = {2024},
+  pages      = {520--534},
+  file       = {Full Text:files/328/Mamo et al. - 2024 - Higher Education Faculty Perceptions of ChatGPT and the Influencing Factors A Sentiment Analysis of.pdf:application/pdf}
+}
+
+@article{iglesias_learning_2009,
+  title     = {Learning teaching strategies in an {Adaptive} and {Intelligent} {Educational} {System} through {Reinforcement} {Learning}},
+  volume    = {31},
+  copyright = {http://www.springer.com/tdm},
+  issn      = {0924-669X, 1573-7497},
+  url       = {http://link.springer.com/10.1007/s10489-008-0115-1},
+  doi       = {10.1007/s10489-008-0115-1},
+  language  = {en},
+  number    = {1},
+  urldate   = {2025-09-30},
+  journal   = {Applied Intelligence},
+  author    = {Iglesias, Ana and Martínez, Paloma and Aler, Ricardo and Fernández, Fernando},
+  month     = aug,
+  year      = {2009},
+  pages     = {89--106},
+  file      = {Accepted Version:files/329/Iglesias et al. - 2009 - Learning teaching strategies in an Adaptive and Intelligent Educational System through Reinforcement.pdf:application/pdf}
+}
+
+@article{sharma_role_2025,
+  title      = {The role of large language models in personalized learning: a systematic review of educational impact},
+  volume     = {6},
+  issn       = {2662-9984},
+  shorttitle = {The role of large language models in personalized learning},
+  url        = {https://link.springer.com/10.1007/s43621-025-01094-z},
+  doi        = {10.1007/s43621-025-01094-z},
+  language   = {en},
+  number     = {1},
+  urldate    = {2025-09-30},
+  journal    = {Discover Sustainability},
+  author     = {Sharma, Sahil and Mittal, Puneet and Kumar, Mukesh and Bhardwaj, Vivek},
+  month      = apr,
+  year       = {2025},
+  pages      = {243}
+}
+
+@misc{singla_reinforcement_2021,
+  title      = {Reinforcement {Learning} for {Education}: {Opportunities} and {Challenges}},
+  shorttitle = {Reinforcement {Learning} for {Education}},
+  url        = {http://arxiv.org/abs/2107.08828},
+  doi        = {10.48550/arXiv.2107.08828},
+  urldate    = {2025-09-30},
+  publisher  = {arXiv},
+  author     = {Singla, Adish and Rafferty, Anna N. and Radanovic, Goran and Heffernan, Neil T.},
+  month      = jul,
+  year       = {2021},
+  note       = {arXiv:2107.08828 [cs]},
+  keywords   = {Computer Science - Artificial Intelligence, Computer Science - Machine Learning},
+  file       = {Preprint PDF:files/331/Singla et al. - 2021 - Reinforcement Learning for Education Opportunities and Challenges.pdf:application/pdf;Snapshot:files/330/2107.html:text/html}
+}
+
+@article{li_interactive_2025,
+  title    = {Interactive online learning method for students based on artificial intelligence},
+  volume   = {5},
+  issn     = {27310809},
+  url      = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105012853050&doi=10.1007%2Fs44163-025-00401-x&partnerID=40&md5=44a124846624efdf98e77159994a09c8},
+  doi      = {10.1007/s44163-025-00401-x},
+  language = {English},
+  number   = {1},
+  journal  = {Discover Artificial Intelligence},
+  author   = {Li, C. and Yin, W.},
+  year     = {2025},
+  note     = {Publisher: Springer Nature},
+  keywords = {Adaptive learning systems, Artificial intelligence (AI), Deep learning, Dwarf mongoose optimization (DMO), Educational data mining, Gated recurrent unit (GRU), Interactive online learning, Online education, Personalized learning, Student performance prediction}
+}
+
+@article{zaoui_seghroucheni_systematic_2025,
+  title    = {Systematic {Review} and {Framework} for {AI}-{Driven} {Tacit} {Knowledge} {Conversion} {Methods} and {Machine} {Learning} {Algorithms} for {Ontology}-{Based} {Chatbots} in {E}-{Learning} {Platforms}},
+  volume   = {19},
+  issn     = {18657923},
+  url      = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85216209159&doi=10.3991%2Fijim.v19i01.51051&partnerID=40&md5=d0b87878b041e256d36c53e55314adfd},
+  doi      = {10.3991/ijim.v19i01.51051},
+  language = {English},
+  number   = {1},
+  journal  = {International Journal of Interactive Mobile Technologies},
+  author   = {Zaoui Seghroucheni, O.Z. and Lazaar, M. and Achhab, M.},
+  year     = {2025},
+  note     = {Publisher: International Federation of Engineering Education Societies (IFEES)},
+  keywords = {adaptive learning, explicit knowledge, knowledge conversion, natural language processing (NLP), ontology-based chatbot, tacit knowledge},
+  pages    = {126--139}
+}
+
+
+@article{zheng_intelligent_2024,
+  title    = {Intelligent e-learning design for art courses based on adaptive learning algorithms and artificial intelligence},
+  volume   = {50},
+  issn     = {18759521},
+  url      = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85192494867&doi=10.1016%2Fj.entcom.2024.100713&partnerID=40&md5=0c85701be2270079ceefd5ed3ff09659},
+  doi      = {10.1016/j.entcom.2024.100713},
+  language = {English},
+  journal  = {Entertainment Computing},
+  author   = {Zheng, W.},
+  year     = {2024},
+  note     = {Publisher: Elsevier B.V.},
+  keywords = {Adaptive learning algorithm, Art course, Artificial intelligence, Intelligent e-learning}
+}
+
+@article{dorca_2013,
+  title    = {Comparing strategies for modeling students learning styles through reinforcement learning in adaptive and intelligent educational systems: An experimental analysis},
+  journal  = {Expert Systems with Applications},
+  volume   = {40},
+  number   = {6},
+  pages    = {2092-2101},
+  year     = {2013},
+  issn     = {0957-4174},
+  doi      = {https://doi.org/10.1016/j.eswa.2012.10.014},
+  url      = {https://www.sciencedirect.com/science/article/pii/S0957417412011281},
+  author   = {Fabiano A. Dorça and Luciano V. Lima and Márcia A. Fernandes and Carlos R. Lopes},
+  keywords = {Student modeling, Learning styles, Adaptive and intelligent educational systems, Reinforcement learning, Student evaluation, e-Learning}
+}
+
+@article{Huang_Zhou_2023,
+  title     = {Trends, Research Issues and Applications of Artificial Intelligence in Language Education},
+  author    = {Xinyi Huang and Di Zou and Gary Cheng and Xieling Chen and Haoran Xie},
+  keywords  = {Artificial Intelligence; Language Education; Bibliometric Analysis; Automated Writing Evaluation; Intelligent Tutoring System},
+  journal   = {Educational Technology {\&} Society},
+  volume    = {26},
+  number    = {1},
+  year      = {2023},
+  pages     = {112-131},
+  issn      = {1176-3647},
+  publisher = {International Forum of Educational Technology {\&} Society},
+  doi       = {10.30191/ETS.202301_26(1).0009}
+}
+
+
+@inproceedings{Bassen_2020,
+  author    = {Bassen, Jonathan and Balaji, Bharathan and Schaarschmidt, Michael and Thille, Candace and Painter, Jay and Zimmaro, Dawn and Games, Alex and Fast, Ethan and Mitchell, John C.},
+  title     = {Reinforcement Learning for the Adaptive Scheduling of Educational Activities},
+  year      = {2020},
+  isbn      = {9781450367080},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3313831.3376518},
+  doi       = {10.1145/3313831.3376518},
+  booktitle = {Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems},
+  pages     = {1–12},
+  numpages  = {12},
+  keywords  = {adaptive learning, online education, reinforcement learning},
+  location  = {Honolulu, HI, USA},
+  series    = {CHI '20}
+}
+
+@article{khater_online_2020,
+  title    = {Online learning based on adaptive learning rate for a class of recurrent fuzzy neural network},
+  volume   = {32},
+  issn     = {14333058; 09410643},
+  url      = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85069930624&doi=10.1007%2Fs00521-019-04372-w&partnerID=40&md5=1ae8d6db96e0da96e9dc82f0027f0715},
+  doi      = {10.1007/s00521-019-04372-w},
+  language = {English},
+  number   = {12},
+  journal  = {Neural Computing and Applications},
+  author   = {Khater, A.A. and El-Nagar, A.M. and El-Bardini, M. and El-Rabaie, N.M.},
+  year     = {2020},
+  note     = {Publisher: Springer},
+  keywords = {Adaptive learning rate, LM method, Lyapunov function, Recurrent interval type-2 fuzzy neural networks, Reinforcement learning},
+  pages    = {8691--8710}
+}
+
+@inproceedings{keshtkar_ai_2025,
+  title     = {{AI} {Tutor}: {Transforming} {Education} with {Intelligent} {Learning}},
+  volume    = {38},
+  isbn      = {23340762; 23340754},
+  url       = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105007931112&doi=10.32473%2Fflairs.38.1.138666&partnerID=40&md5=daf1e2b199ce9fd68289baf6439e765a},
+  doi       = {10.32473/flairs.38.1.138666},
+  language  = {English},
+  publisher = {Florida Online Journals, University of Florida},
+  author    = {Keshtkar, F. and Chalarca, S. and Bardelli, G. and Ilyasov, A. and Torres, S. and Bukhari, S.A.C.},
+  year      = {2025},
+  keywords  = {AI Tutor, Education, Generative AI, LLMs, Programming, Topic Modeling}
+}
+
+@inproceedings{zhou_innovative_2025,
+  title     = {Innovative {Negative} {Sampling} and {Natural} {Language} {Processing} {Approach} for {Optimizing} {Knowledge} {Point} {Recommendations} in {Personalized} {Learning}},
+  url       = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105010755996&doi=10.1109%2FICICT64582.2025.00045&partnerID=40&md5=bca1774b55442abd66b21fb107d6f07a},
+  doi       = {10.1109/ICICT64582.2025.00045},
+  language  = {English},
+  publisher = {Institute of Electrical and Electronics Engineers Inc.},
+  author    = {Zhou, J. and Abisado, M.B.},
+  year      = {2025},
+  keywords  = {Adaptive Learning, AI-Driven Education, Educational Data Mining, Knowledge Point Recommendation, Natural Language Processing (NLP), Negative Sampling, Personalized Learning},
+  pages     = {248--253}
+}
+
+@inproceedings{seidel_architecture_2025,
+  title     = {Architecture for Gradually AI Teamed Adaptation Rules in Learning Management Systems},
+  isbn      = {21845026},
+  language  = {English},
+  publisher = {{Science and Technology Publications}},
+  author    = {Seidel, N.},
+  year      = {2025},
+  keywords  = {Adaptive Learning, Learning Management System, Self-Regulated Learning},
+  pages     = {243--254}
+}
+
+@inproceedings{wang_education_2024,
+  title     = {Education Decision Support System Based on Big Data Analysis: Algorithm Framework Integrating Machine Learning and Complex Network Theory},
+  url       = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85208103626&doi=10.1145%2F3691720.3691773&partnerID=40&md5=6198289732fde35efc82fad0f974a263},
+  doi       = {10.1145/3691720.3691773},
+  language  = {English},
+  publisher = {Association for Computing Machinery},
+  author    = {Wang, J.},
+  year      = {2024},
+  keywords  = {Big Data Analysis, Complex Network Theory, Educational Decision Support System, Long Short-Term Memory Network},
+  pages     = {314--319}
+}
+
+
+@inproceedings{eom_roles_2024,
+  title     = {Roles of {Machine} {Learning} and {Deep} {Learning} for {Supporting} {E}-{Learning} {Processes} and {Learning} {Outcomes} through {The} {Lens} {Of} {System}'s {View} of {E}-{Learning} {Success} {Model}},
+  url       = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85213012582&partnerID=40&md5=b413259cd31db6aa614fc0bf3b85b6af},
+  language  = {English},
+  publisher = {Association for Information Systems},
+  author    = {Eom, S. and Amroune, M. and Khediri, A. and Laour, M.R.},
+  year      = {2024},
+  keywords  = {Artificial intelligence, deep learning, distance learning systems, machine learning, system's view of the e-learning success model}
+}
+
+
+@inproceedings{chen_decision_2017,
+  title     = {Decision support system for real-time trading based on on-line learning and parallel computing techniques},
+  url       = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85027447435&doi=10.1109%2FCCBD.2016.038&partnerID=40&md5=a9ca278bc5a950f25a80756e3d1e557e},
+  doi       = {10.1109/CCBD.2016.038},
+  language  = {English},
+  publisher = {Institute of Electrical and Electronics Engineers Inc.},
+  author    = {Chen, C.-T. and Hsiao, C.-Y. and Lin, J.-Y. and Huang, S.-J. and Chang, Y. and Huang, S.-H.},
+  year      = {2017},
+  keywords  = {Algorithmic trading, Decision support system, joint-AdaBoost, Open Computing Language, Parallel Computing},
+  pages     = {151--156}
+}
+
+
+

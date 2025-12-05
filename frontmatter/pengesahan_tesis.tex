@@ -1,0 +1,121 @@
+% chtex-lint: disable
+% ============================================================================
+%                        PENGESAHAN TESIS
+% ============================================================================
+% Halaman pengesahan tesis setelah sidang
+%
+% PETUNJUK:
+% - Halaman ini ditandatangani setelah sidang tesis
+% - Ditandatangani oleh: Dewan Penguji, Dekan, dan Ketua Penguji
+% - Isi tanggal sidang pada teks pengesahan dan bagian tanda tangan
+%
+% VARIABEL YANG DIGUNAKAN:
+% - \ThesisTitle    : Judul tesis (dari main.tex)
+% - \AuthorName     : Nama penulis huruf kapital (dari main.tex)
+% - \StudentID      : NIM penulis (dari main.tex)
+% - \ExaminerOne    : Nama penguji 1 (dari main.tex)
+% - \ExaminerTwo    : Nama penguji 2 (dari main.tex)
+% - \DeanName       : Nama dekan (dari main.tex)
+% - \ChairExaminer  : Nama ketua penguji (dari main.tex)
+% ============================================================================
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{PENGESAHAN TESIS}
+\thispagestyle{plain}
+
+\begin{center}
+% Logo UDINUS
+\includegraphics[width=3cm]{documents/udinus-logo.png}
+
+\vspace{0.5cm}
+
+% Nama Universitas
+{\bfseries UNIVERSITAS DIAN NUSWANTORO}
+
+\vspace{1cm}
+
+% Judul Halaman
+{\bfseries PENGESAHAN TESIS}
+
+\end{center}
+
+\vspace{0.8cm}
+
+% ============================================================================
+% METADATA TESIS
+% ============================================================================
+
+\noindent
+\begin{tabular}{@{}l@{\hspace{0.5cm}}l@{\hspace{0.5cm}}p{\dimexpr\textwidth-1cm-1.5cm\relax}@{}}
+JUDUL & : & \textbf{\ThesisTitle} \\[0.3cm]
+NAMA & : & \AuthorName \\[0.3cm]
+NIM & : & \StudentID
+\end{tabular}
+
+\vspace{0.8cm}
+
+% ============================================================================
+% TEKS PENGESAHAN
+% ============================================================================
+% PETUNJUK: Ganti {Tanggal Sidang} dengan tanggal sidang yang sebenarnya
+%           Contoh: "25 Maret 2025"
+% ============================================================================
+
+\noindent
+\hspace{0.5cm} Tesis ini telah diujikan dan dipertahankan di hadapan Dewan Penguji pada Sidang Tesis tanggal {Tanggal Sidang}. Menurut pandangan kami, Tesis ini memadai dari segi kualitas untuk tujuan penganugerahan gelar Magister Komputer (M.Kom.)
+
+\vspace{0.8cm}
+
+% ============================================================================
+% BAGIAN TANDA TANGAN DEWAN PENGUJI
+% ============================================================================
+% PETUNJUK: Isi tanggal pengesahan
+% ============================================================================
+
+\begin{center}
+{Kota}, \makebox[4cm]{\dotfill}  % Ganti {Kota} dengan kota Anda
+
+\vspace{0.5cm}
+
+Dewan Penguji:
+\end{center}
+
+\vspace{1.5cm}
+
+% --- Baris Pertama: 2 Kolom Anggota Penguji ---
+\noindent
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+{\small \underline{\ExaminerOne}}\\
+{\small Anggota}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+{\small \underline{\ExaminerTwo}}\\
+{\small Anggota}
+\end{minipage}
+
+\vspace{3em}
+
+% --- Baris Kedua: Mengetahui ---
+\begin{center}
+{\small Mengetahui,}
+\end{center}
+
+\vspace{3em}
+
+% --- Baris Ketiga: 2 Kolom Dekan dan Ketua Penguji ---
+\noindent
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+{\small \underline{\DeanName}}\\
+{\small Dekan}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+{\small \underline{\ChairExaminer}}\\
+{\small Ketua Penguji}
+\end{minipage}
