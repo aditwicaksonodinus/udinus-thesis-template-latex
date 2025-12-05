@@ -109,7 +109,7 @@ udinus-thesis-template/
 
 ## 🚀 Panduan Kompilasi
 
-### Urutan Kompilasi (PENTING!)bebas
+### Urutan Kompilasi (PENTING!)
 
 Template ini menggunakan **XeLaTeX** dan **Biber**. Urutan kompilasi yang benar:
 
@@ -162,7 +162,7 @@ Buka Settings JSON (`Ctrl+Shift+P` → "Preferences: Open Settings (JSON)") dan 
     "editor.formatOnSave": false,
     "editor.lineHeight": 2.0,
     "editor.suggestSelection": "recentlyUsedByPrefix",
-    "editor.fontFamily": "Ubuntu Mono",
+    "editor.fontFamily": "Fira Code",
     "editor.fontWeight": "500",
     "editor.fontSize": 16,
     "editor.fontLigatures": true
@@ -351,7 +351,7 @@ git commit -m "Deskripsi perubahan"
 git push origin fitur-baru
 ```
 
-Lalu buat **Pull Request** di GitHub untuk review dan merge.
+Lalu buat **Pull Request** di GitHub untuk review dan merge. Kirim email untuk menjadi kontributor kami!
 
 ---
 
