@@ -11,8 +11,13 @@
 
 Template LaTeX untuk penulisan tesis Program Pascasarjana Magister Teknik Informatika, Universitas Dian Nuswantoro (UDINUS). Disusun mengikuti Panduan Tesis UDINUS (2020).
 
-## 📋 Daftar Isi
+## ☘️ Overleaf Repository
 
+Kamu bisa coba langsung di 
+https://www.overleaf.com/read/jzqntbhbxsxn#c512b8 
+Tinggal Compile 😎
+
+## 📋 Daftar Isi
 - [Persyaratan](#-persyaratan)
 - [Struktur Folder](#-struktur-folder)
 - [Panduan Kompilasi](#-panduan-kompilasi)
