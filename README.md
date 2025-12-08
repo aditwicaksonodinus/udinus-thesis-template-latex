@@ -13,9 +13,7 @@ Template LaTeX untuk penulisan tesis Program Pascasarjana Magister Teknik Inform
 
 ## ☘️ Overleaf Repository
 
-Kamu bisa coba langsung di 
-https://www.overleaf.com/project/6933743e986becf26fc9da36
-Tinggal Compile 😎
+[Ditolak perijinan Overleaf, masih proses]
 
 ## 📋 Daftar Isi
 - [Persyaratan](#-persyaratan)
@@ -53,19 +51,21 @@ sudo apt install ttf-mscorefonts-installer
 
 ### Instalasi di Windows
 
-1. Unduh dan instal [MiKTeX](https://miktex.org/download)
-2. Font Times New Roman sudah tersedia secara default
+1. Via WSL (**REKOMENDASI**)
+- Install wsl `wsl --install -d Ubuntu-24.04`
+- Lalu instalasi pake perintah ubuntu diatas
+2. Unduh dan instal [MiKTeX](https://miktex.org/download)
 
 ### Instalasi di MacOS
 
-#### install via terminal, menggunakan Brew
+1. install via terminal, menggunakan Brew
 
 ```bash
 brew install --cask mactex
 ```
 Semua paket sudah termasuk
 
-#### Install via MacTex
+2. Install via MacTex
 
 1. Buka situs resmi LaTeX: latex-project.org/get, Pilih distribusi MacTeX (sekitar 4 GB, karena sudah termasuk paket lengkap).
 2. Jalankan file `.pkh` hasil download, Ikuti setup biasa
