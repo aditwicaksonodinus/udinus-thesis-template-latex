@@ -14,7 +14,7 @@ Template LaTeX untuk penulisan tesis Program Pascasarjana Magister Teknik Inform
 ## ☘️ Overleaf Repository
 
 Kamu bisa coba langsung di 
-https://www.overleaf.com/read/jzqntbhbxsxn#c512b8 
+[https://www.overleaf.com/read/jzqntbhbxsxn#c512b8 ](https://www.overleaf.com/4696896675stxkbmdgvfjd#ca1738)
 Tinggal Compile 😎
 
 ## 📋 Daftar Isi
