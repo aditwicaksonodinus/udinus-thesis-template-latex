@@ -5,6 +5,15 @@
             "tools": [
                 "latexmk-xelatex"
             ]
+        },
+        {
+            "name": "xelatex -> biber -> xelatex x2",
+            "tools": [
+                "xelatex",
+                "biber",
+                "xelatex",
+                "xelatex"
+            ]
         }
     ],
     "latex-workshop.latex.tools": [
@@ -16,6 +25,22 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "%DOC%"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
             ]
         }
     ],
