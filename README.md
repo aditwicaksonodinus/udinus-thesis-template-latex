@@ -32,9 +32,9 @@ Pastikan sistem Anda sudah terinstal:
 | **XeLaTeX**                  | Compiler untuk mendukung font system (Times New Roman) |
 | **Biber**                    | Pemroses bibliografi untuk biblatex                    |
 | **latexmk**                  | Otomatisasi kompilasi (cukup 1 perintah)               |
-| **VS Code**                  | Editor yang direkomendasikan                           |
-| **LaTeX Workshop**           | Ekstensi VS Code untuk LaTeX                           |
-| **Font Times New Roman**     | Harus terinstal di sistem                              |
+| **VS Code** + LaTeX Workshop  | Editor utama (opsional)                          |
+| **TeXstudio**                 | Editor alternatif (bisa F5 langsung)             |
+| **Font Times New Roman**     | Harus terinstal di sistem (Linux: pakai `fonts-tinos`)
 
 ### Instalasi di Ubuntu/Debian
 
@@ -66,8 +66,50 @@ Semua paket sudah termasuk
 1. Buka situs resmi LaTeX: latex-project.org/get, Pilih distribusi MacTeX (sekitar 4 GB, karena sudah termasuk paket lengkap).
 2. Jalankan file `.pkh` hasil download, Ikuti setup biasa
 3. Integrasi dengan VScode + LateX Workshop
-   
 ---
+
+## ⚙️ Konfigurasi TeXstudio
+
+Template sudah dilengkapi magic comments dan project file agar kompilasi langsung *one-click* (F5) tanpa setelan manual.
+
+### Magic Comments (Otomatis Terdeteksi)
+
+Semua file `.tex` sudah memiliki baris berikut:
+
+| Magic Comment | Fungsi |
+|---|---|
+| `% !TEX TS-program = xelatex` | Compiler otomatis XeLaTeX |
+| `% !BIB TS-program = biber` | Bibliography otomatis Biber |
+| `% !TEX root = ../main.tex` | Root document (kompilasi `main.tex`) |
+| `% !TEX encoding = UTF-8` | Encoding Unicode |
+
+### Project File
+
+Buka `template-udinusthesis.txs` via **File → Open Project** untuk langsung memuat seluruh file template.
+
+### Verifikasi Setelan
+
+Pastikan **Options → Configure TeXstudio → Build**:
+
+| Parameter | Nilai |
+|---|---|
+| Default Compiler | **XeLaTeX** (terdeteksi otomatis) |
+| Default Bibliography Tool | **Biber** (ubah manual jika masih BibTeX) |
+| Build & View | `latexmk -xelatex -synctex=1 -interaction=nonstopmode %.tex` |
+
+Setelah itu, tekan **F5** (Build & View) — kompilasi berjalan dengan root, compiler, dan bibliography yang benar.
+
+### Catatan Cross-Platform
+
+| Platform | Catatan |
+|---|---|
+| **Windows** | TeXstudio + MiKTeX/XeLaTeX/Biber — F5 langsung jalan |
+| **macOS** | TeXstudio + MacTeX/XeLaTeX/Biber — F5 langsung jalan |
+| **Linux** | TeXstudio + TeX Live/XeLaTeX/Biber — F5 langsung jalan. Font TNR harus diinstal manual (`sudo apt install ttf-mscorefonts-installer`) atau ganti `\setmainfont{Tinos}` di `preamble/packages.tex` |
+| **Semua** | `compile.sh` hanya untuk terminal Unix — tidak diperlukan jika pakai TeXstudio atau VS Code |
+
+---
+
 
 ## 📁 Struktur Folder
 
@@ -75,7 +117,8 @@ Semua paket sudah termasuk
 udinus-thesis-template/
 ├── main.tex                    # File utama (runner — compile dari sini)
 ├── references.bib              # Database referensi
-├── compile.sh                  # Script kompilasi (latexmk)
+├── compile.sh                  # Script kompilasi (latexmk + XeLaTeX)
+├── template-udinusthesis.txs   # Project file TeXstudio
 ├── README.md                   # Dokumentasi ini
 │
 ├── preamble/                   # Konfigurasi terpisah
@@ -119,6 +162,8 @@ udinus-thesis-template/
 
 Template ini menggunakan **XeLaTeX** + **Biber** + **latexmk**.  
 Cukup **satu perintah** — latexmk otomatis menjalankan XeLaTeX, Biber, dan rerun sampai semua referensi stabil.
+
+> **Spasi baris:** Template menggunakan `\onehalfspacing` (setara spasi 1,5 Microsoft Word). Baseline skip aktual ≈ 18pt untuk font 12pt — sesuai standar panduan tesis.
 
 ### Gunakan Script (Terminal)
 
@@ -171,8 +216,7 @@ Buka Settings JSON (`Ctrl+Shift+P` → "Preferences: Open Settings (JSON)") dan 
   "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.synctex.afterBuild.enabled": true,
   "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
-  "latex-workshop.chktex.enabled": false,
-
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
   // ===================== Build Recipes ========================
   // Resep build LaTeX - XeLaTeX + Biber (untuk fontspec & bibliografi)
   "latex-workshop.latex.recipes": [
