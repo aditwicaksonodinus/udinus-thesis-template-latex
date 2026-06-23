@@ -31,6 +31,7 @@ Pastikan sistem Anda sudah terinstal:
 | **TeX Live** atau **MiKTeX** | Distribusi LaTeX lengkap                               |
 | **XeLaTeX**                  | Compiler untuk mendukung font system (Times New Roman) |
 | **Biber**                    | Pemroses bibliografi untuk biblatex                    |
+| **latexmk**                  | Otomatisasi kompilasi (cukup 1 perintah)               |
 | **VS Code**                  | Editor yang direkomendasikan                           |
 | **LaTeX Workshop**           | Ekstensi VS Code untuk LaTeX                           |
 | **Font Times New Roman**     | Harus terinstal di sistem                              |
@@ -72,9 +73,16 @@ Semua paket sudah termasuk
 
 ```
 udinus-thesis-template/
-├── main.tex                    # File utama (compile dari sini)
+├── main.tex                    # File utama (runner — compile dari sini)
 ├── references.bib              # Database referensi
+├── compile.sh                  # Script kompilasi (latexmk)
 ├── README.md                   # Dokumentasi ini
+│
+├── preamble/                   # Konfigurasi terpisah
+│   ├── metadata.tex            #   Variabel tesis (judul, penulis, dll)
+│   ├── packages.tex            #   Semua package LaTeX
+│   ├── style.tex               #   Format & layout
+│   └── config.tex              #   Fine-tuning bibliografi & cross-ref
 │
 ├── frontmatter/                # Halaman depan
 │   ├── cover.tex               # Sampul
@@ -109,35 +117,26 @@ udinus-thesis-template/
 
 ## 🚀 Panduan Kompilasi
 
-### Urutan Kompilasi (PENTING!)
+Template ini menggunakan **XeLaTeX** + **Biber** + **latexmk**.  
+Cukup **satu perintah** — latexmk otomatis menjalankan XeLaTeX, Biber, dan rerun sampai semua referensi stabil.
 
-Template ini menggunakan **XeLaTeX** dan **Biber**. Urutan kompilasi yang benar:
-
-```
-XeLaTeX → Biber → XeLaTeX → XeLaTeX
-```
-
-| Langkah | Perintah           | Fungsi                                 |
-| ------- | ------------------ | -------------------------------------- |
-| 1       | `xelatex main.tex` | Kompilasi awal, generate .aux dan .bcf |
-| 2       | `biber main`       | Proses bibliografi dari references.bib |
-| 3       | `xelatex main.tex` | Update referensi dan sitasi            |
-| 4       | `xelatex main.tex` | Finalisasi cross-reference             |
-
-### Kompilasi Manual (Terminal)
+### Gunakan Script (Terminal)
 
 ```bash
 cd /path/to/udinus-thesis-template
+./compile.sh
+```
 
-# Langkah 1: XeLaTeX pertama
-xelatex -synctex=1 -interaction=nonstopmode main.tex
+### Atau Langsung dengan latexmk
 
-# Langkah 2: Biber
-biber main
+```bash
+latexmk -xelatex -synctex=1 -interaction=nonstopmode main.tex
+```
 
-# Langkah 3 & 4: XeLaTeX dua kali lagi
-xelatex -synctex=1 -interaction=nonstopmode main.tex
-xelatex -synctex=1 -interaction=nonstopmode main.tex
+### Bersihkan File Sementara
+
+```bash
+latexmk -c
 ```
 
 ---
@@ -234,7 +233,7 @@ Buka Settings JSON (`Ctrl+Shift+P` → "Preferences: Open Settings (JSON)") dan 
 
 ### 1. Edit Metadata Tesis
 
-Buka `main.tex` dan edit bagian **VARIABEL METADATA TESIS**:
+Buka `preamble/metadata.tex` dan edit variabel berikut:
 
 ```latex
 \newcommand{\ThesisTitle}{JUDUL TESIS ANDA}
@@ -287,7 +286,7 @@ Lalu sitasi di dokumen dengan `\cite{Penulis2024}`.
 
 ### Referensi muncul sebagai [?]
 
-**Solusi:** Kompilasi ulang dengan urutan lengkap: XeLaTeX → Biber → XeLaTeX → XeLaTeX
+**Solusi:** Jalankan `./compile.sh` atau `latexmk -xelatex main.tex` untuk kompilasi ulang penuh.
 
 ### Font Times New Roman tidak ditemukan
 
@@ -339,7 +338,7 @@ Jika menemukan bug atau ingin menambahkan fitur, silakan berkontribusi melalui G
 
 ```bash
 # Clone repository
-git clone github.com/aditwicaksonodinus/udinus-thesis-template-latex/
+git clone https://github.com/aditwicaksonodinus/udinus-thesis-template-latex.git
 
 # Buat branch baru untuk fitur/perbaikan
 git checkout -b fitur-baru

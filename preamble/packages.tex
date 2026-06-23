@@ -1,0 +1,256 @@
+% ============================================================================
+%                           PENGATURAN HALAMAN
+% ============================================================================
+% Margin sesuai panduan UDINUS:
+% - Kiri: 4 cm (untuk jilid)
+% - Kanan: 2.5 cm
+% - Atas: 3 cm
+% - Bawah: 3 cm
+\usepackage[a4paper,left=4cm,right=2.5cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{tabularx}
+\usepackage{xltabular}
+
+% ============================================================================
+%                           PENGATURAN FONT
+% ============================================================================
+% Font wajib: Times New Roman 12pt (sesuai panduan)
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{unicode-math}
+\setmathfont{Latin Modern Math}
+
+% ============================================================================
+%                           WARNA KHUSUS COVER
+% ============================================================================
+\usepackage{xcolor}
+\definecolor{darkred}{RGB}{139,0,0}  % Warna merah gelap untuk cover
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{codeblue}{rgb}{0.13,0.29,0.53}
+\definecolor{codeorange}{rgb}{0.8,0.4,0}
+\definecolor{backcolour}{rgb}{0.97,0.97,0.97}
+
+% ============================================================================
+%                           PENGATURAN SPASI
+% ============================================================================
+% Spasi 1.5 sesuai panduan penulisan tesis
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{indentfirst}  % Indent paragraf pertama setiap section
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=*, itemsep=0.5em}
+\setlist[itemize]{leftmargin=*, itemsep=0.5em}
+
+% ============================================================================
+%                           PENGATURAN BAHASA
+% ============================================================================
+\usepackage[english]{babel}
+\babelprovide[main]{indonesian}
+\addto\captionsindonesian{%
+  \renewcommand{\contentsname}{DAFTAR ISI}%
+  \renewcommand{\listfigurename}{DAFTAR GAMBAR}%
+  \renewcommand{\listtablename}{DAFTAR TABEL}%
+}
+
+% ============================================================================
+%                        HEADER & FOOTER (NOMOR HALAMAN)
+% ============================================================================
+\usepackage{fancyhdr}
+
+% ============================================================================
+%                        FORMAT JUDUL BAB & SUBBAB
+% ============================================================================
+\usepackage{titlesec}
+\usepackage{etoolbox}
+
+% ============================================================================
+%                         KONFIGURASI DAFTAR ISI (TOC)
+% ============================================================================
+\usepackage{tocloft}
+
+% ============================================================================
+%                    GAMBAR, TABEL, DAN CAPTION
+% ============================================================================
+\usepackage{graphicx}
+\usepackage{pdfpages}  % Untuk \includepdf pada lampiran
+\usepackage[export]{adjustbox}  % max width=\textwidth untuk tabel/gambar overfull
+\usepackage{caption}
+
+% --- TikZ untuk diagram dan flowchart ---
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{shapes.geometric, shapes.misc, arrows.meta, positioning, calc, decorations.pathreplacing, backgrounds, fit}
+
+% Pastikan amsmath dimuat untuk kontrol persamaan
+\usepackage{amsmath}
+
+% ============================================================================
+%                         PSEUDOCODE/ALGORITMA
+% ============================================================================
+\usepackage[ruled,vlined,linesnumbered,resetcount]{algorithm2e}
+\SetKwInput{KwInput}{Input}
+\SetKwInput{KwOutput}{Output}
+\SetKw{KwAnd}{and}
+\SetKw{KwOr}{or}
+\SetAlgoCaptionSeparator{.}
+\SetAlgoNlRelativeSize{-1}
+\SetAlFnt{\small}
+\SetKwComment{Comment}{$\triangleright$ }{}
+
+% ============================================================================
+%                         KODE SUMBER (SOURCE CODE)
+% ============================================================================
+\usepackage{listings}
+
+% --- Style Default untuk Kode ---
+\lstdefinestyle{defaultstyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen}\itshape,
+    keywordstyle=\color{codeblue}\bfseries,
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codeorange},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=8pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single,
+    framerule=0.5pt,
+    rulecolor=\color{codegray},
+    xleftmargin=2em,
+    framexleftmargin=1.5em
+}
+
+% --- Style khusus Python ---
+\lstdefinestyle{pythonstyle}{
+    style=defaultstyle,
+    language=Python,
+    morekeywords={self, True, False, None, as, with, async, await, yield, lambda},
+    emph={def, class, return, import, from, if, elif, else, for, while, try, except, finally, raise, pass, break, continue, and, or, not, in, is},
+    emphstyle=\color{codepurple}\bfseries
+}
+
+% --- Style khusus JavaScript (definisi manual karena tidak built-in) ---
+\lstdefinelanguage{JavaScript}{
+    keywords={break, case, catch, continue, debugger, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with, class, const, enum, export, extends, import, super, implements, interface, let, package, private, protected, public, static, yield, async, await},
+    morecomment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]',
+    morestring=[b]",
+    morestring=[b]`,
+    sensitive=true
+}
+
+\lstdefinestyle{javascriptstyle}{
+    style=defaultstyle,
+    language=JavaScript,
+    keywordstyle=\color{codeblue}\bfseries,
+    commentstyle=\color{codegreen}\itshape,
+    stringstyle=\color{codeorange}
+}
+
+% --- Style khusus Java ---
+\lstdefinestyle{javastyle}{
+    style=defaultstyle,
+    language=Java,
+    morekeywords={String, System, out, println},
+    emph={public, private, protected, static, void, class, interface, extends, implements, new, return, if, else, for, while, try, catch, finally, throw},
+    emphstyle=\color{codepurple}\bfseries
+}
+
+% --- Style khusus Prompt LLM ---
+\lstdefinelanguage{PromptLLM}{
+    moredelim=[s][\color{codeblue}\bfseries]{[}{]},
+    moredelim=[s][\color{codeorange}\bfseries]{\{}{\}},
+    morekeywords={Output, JSON, Return, keys, with},
+    keywordstyle=\color{codepurple}\bfseries,
+    morecomment=[l]{-},
+    commentstyle=\color{codegreen},
+}
+
+\lstdefinestyle{promptstyle}{
+    style=defaultstyle,
+    language=PromptLLM,
+    basicstyle=\ttfamily\scriptsize,
+}
+
+% Set style default
+\lstset{style=defaultstyle}
+
+% Dukungan karakter spesial (Greek, dll)
+\lstset{
+  extendedchars=true,
+  literate={α}{{$\alpha$}}1 {γ}{{$\gamma$}}1 {ε}{{$\epsilon$}}1
+}
+
+% Counter sharing: lstlisting dan algocf pakai nomor urut yang sama, keduanya masuk .loa
+\makeatletter
+\@addtoreset{lstlisting}{chapter}
+\renewcommand{\ext@lstlisting}{loa}
+
+\let\orig@refstepcounter\refstepcounter
+\renewcommand{\refstepcounter}[1]{%
+  \def\temp@arg{#1}%
+  \def\temp@lst{lstlisting}%
+  \ifx\temp@arg\temp@lst
+    \orig@refstepcounter{algocf}%
+    \setcounter{lstlisting}{\value{algocf}}%
+  \else
+    \orig@refstepcounter{#1}%
+  \fi
+}
+
+\let\orig@stepcounter\stepcounter
+\renewcommand{\stepcounter}[1]{%
+  \def\temp@arg{#1}%
+  \def\temp@lst{lstlisting}%
+  \ifx\temp@arg\temp@lst
+    \orig@stepcounter{algocf}%
+    \setcounter{lstlisting}{\value{algocf}}%
+  \else
+    \orig@stepcounter{#1}%
+  \fi
+}
+
+\AtBeginDocument{
+  \@addtoreset{algocf}{chapter}
+  \@addtoreset{lstlisting}{chapter}
+  \renewcommand{\thelstlisting}{\thealgocf}
+  \let\l@lstlisting\l@algocf
+}
+\makeatother
+
+% ============================================================================
+%                            TABEL (IEEE STYLE)
+% ============================================================================
+\usepackage{booktabs}        % Garis horizontal tabel berkualitas
+\usepackage{siunitx}         % Perataan angka dan format numerik
+
+% ============================================================================
+%                          BIBLIOGRAFI (IEEE STYLE)
+% ============================================================================
+\usepackage{csquotes}
+\usepackage[backend=biber,style=ieee,maxbibnames=99,minbibnames=99,sorting=none,isbn=false,url=false,date=year]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{microtype}
+\usepackage{silence}
+
+% ============================================================================
+%                              HYPERREF
+% ============================================================================
+\usepackage[hidelinks]{hyperref}
+
+% ============================================================================
+%                          CLEVEREF (CROSS-REFERENCE)
+% ============================================================================
+% HARUS dimuat SETELAH hyperref
+\usepackage[capitalize,noabbrev]{cleveref}
