@@ -20,7 +20,10 @@
 /*.glo
 /*.gls
 /*.ist
+/*.apx
+/*.equ
+/*.loa
+/*.xdv
 
-# Keep build directory but ignore all contents except PDF
-build/*
-!build/.gitkeep
+# Ignore build output directory
+output/
