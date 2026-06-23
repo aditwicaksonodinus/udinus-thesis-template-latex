@@ -1,0 +1,50 @@
+{
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (xelatex)",
+            "tools": [
+                "latexmk-xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk-xelatex",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bcf",
+        "*.bbl",
+        "*.blg",
+        "*.lof",
+        "*.lot",
+        "*.log",
+        "*.out",
+        "*.run.xml",
+        "*.synctex.gz",
+        "*.toc",
+        "*.fdb_latexmk",
+        "*.fls",
+        "*.idx",
+        "*.ind",
+        "*.ilg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.xdv",
+        "*.equ",
+        "*.loa",
+        "*.apx"
+    ],
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.view.pdf.viewer": "tab"
+}
