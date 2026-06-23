@@ -1,0 +1,127 @@
+% !TEX TS-program = xelatex
+% !BIB TS-program = biber
+% !TEX encoding = UTF-8 Unicode
+% ============================================================================
+%                    TEMPLATE TESIS UDINUS (MAGISTER TEKNIK INFORMATIKA)
+% ============================================================================
+% Disusun mengikuti Panduan Tesis UDINUS (2020)
+%
+% PETUNJUK KOMPILASI:
+% 1. XeLaTeX  -> Kompilasi pertama
+% 2. Biber    -> Untuk bibliografi (biblatex)
+% 3. XeLaTeX  -> Kompilasi kedua
+% 4. XeLaTeX  -> Kompilasi ketiga (untuk cross-reference)
+%
+% CATATAN:
+% - Template ini menggunakan XeLaTeX untuk mendukung font Times New Roman
+% - Pastikan font Times New Roman terinstal di sistem Anda
+% - Gunakan editor LaTeX yang mendukung XeLaTeX (TeXstudio, VS Code + LaTeX Workshop, dll)
+% ============================================================================
+
+\documentclass[12pt,oneside]{book}
+
+\input{preamble/metadata}
+\input{preamble/packages}
+\input{preamble/style}
+\input{preamble/config}
+
+% ============================================================================
+%                              MULAI DOKUMEN
+% ============================================================================
+\begin{document}
+\selectlanguage{indonesian}
+
+% ############################################################################
+%                         BAGIAN I: FRONTMATTER
+%                    (Penomoran halaman: Romawi kecil)
+% ############################################################################
+% CATATAN: Halaman frontmatter menggunakan penomoran romawi kecil (i, ii, iii)
+\pagenumbering{roman}
+
+% ============================================================================
+% HALAMAN JUDUL & PENGESAHAN
+% ============================================================================
+% PETUNJUK: Edit file-file berikut di folder frontmatter/
+%   - cover.tex             : Halaman sampul depan
+%   - titlepage.tex         : Halaman judul dalam
+%   - pengesahan_status.tex : Halaman pengesahan status tesis
+%   - pernyataan_penulis.tex: Halaman pernyataan keaslian
+%   - persetujuan_tesis.tex : Halaman persetujuan sebelum sidang
+%   - pengesahan_tesis.tex  : Halaman pengesahan setelah sidang
+% ============================================================================
+\input{frontmatter/cover}                   % Sampul (kertas linen orange)
+\input{frontmatter/titlepage}               % Halaman Judul (HVS putih)
+\input{frontmatter/pengesahan_status}       % Pengesahan Status Tesis
+\input{frontmatter/pernyataan_penulis}      % Pernyataan Keaslian Karya
+\input{frontmatter/persetujuan_tesis}       % Persetujuan Tesis (sebelum ujian)
+\input{frontmatter/pengesahan_tesis}        % Pengesahan Tesis (sesudah sidang)
+
+% ============================================================================
+% ABSTRAK & KATA PENGANTAR
+% ============================================================================
+% PETUNJUK: Edit file-file berikut di folder frontmatter/
+%   - abstract_en.tex       : Abstract dalam Bahasa Inggris
+%   - abstract_id.tex       : Abstrak dalam Bahasa Indonesia
+%   - acknowledgments.tex   : Kata pengantar/ucapan terima kasih
+% ============================================================================
+\input{frontmatter/abstract_en}             % Abstract (English)
+\input{frontmatter/abstract_id}             % Abstrak (Bahasa Indonesia)
+\input{frontmatter/acknowledgments}         % Kata Pengantar
+
+% ============================================================================
+% DAFTAR-DAFTAR
+% ============================================================================
+\input{frontmatter/daftar_isi}              % Daftar Isi
+\input{frontmatter/daftar_gambar_list}      % Daftar Gambar
+\input{frontmatter/daftar_tabel_list}       % Daftar Tabel
+\input{frontmatter/daftar_persamaan}        % Daftar Persamaan
+\input{frontmatter/daftar_algoritma}        % Daftar Kode dan Algoritma
+\input{frontmatter/daftar_lampiran}         % Daftar Lampiran
+\input{frontmatter/daftar_istilah_list}     % Daftar Istilah
+
+% ############################################################################
+%                         BAGIAN II: CHAPTERS (ISI)
+%                      (Penomoran halaman: Angka Arab)
+% ############################################################################
+\clearpage
+\pagenumbering{arabic}
+
+% ============================================================================
+% BAB-BAB TESIS
+% ============================================================================
+% PETUNJUK: Uncomment baris bab yang sudah selesai ditulis
+% ============================================================================
+\input{chapters/bab1_pendahuluan}           % BAB I   - Pendahuluan
+\input{chapters/bab2_tinjauan_pustaka}      % BAB II  - Tinjauan Pustaka
+\input{chapters/bab3_metode_penelitian}     % BAB III - Metode Penelitian
+%\input{chapters/bab4_pelaksanaan_hasil}    % BAB IV  - Pelaksanaan dan Hasil
+%\input{chapters/bab5_penutup}              % BAB V   - Penutup
+
+% ############################################################################
+%                         BAGIAN III: BACKMATTER
+%                       (Daftar Pustaka & Lampiran)
+% ############################################################################
+
+% ============================================================================
+% DAFTAR PUSTAKA
+% ============================================================================
+\clearpage
+\phantomsection
+\printbibliography[heading=bibintoc, title={DAFTAR PUSTAKA}]
+
+% ============================================================================
+% LAMPIRAN
+% ============================================================================
+% PETUNJUK: Edit file-file berikut di folder backmatter/
+%   - lampiran_a.tex : Lampiran A
+%   - lampiran_b.tex : Lampiran B (tambahkan sesuai kebutuhan)
+%   - lampiran_c.tex : Lampiran C (tambahkan sesuai kebutuhan)
+%
+% Uncomment (hapus %) pada baris yang sudah selesai ditulis
+% ============================================================================
+\appendix
+\input{backmatter/lampiran_a}               % Lampiran A
+%\input{backmatter/lampiran_b}              % Lampiran B
+%\input{backmatter/lampiran_c}              % Lampiran C
+
+\end{document}

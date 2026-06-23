@@ -1,0 +1,390 @@
+% !TEX root = ../main.tex
+% ============================================================================
+%                        HEADER & FOOTER STYLE
+% ============================================================================
+% Nomor halaman: kanan atas (untuk halaman biasa)
+%                tengah bawah (untuk awal bab/chapter)
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}  % Nomor halaman di kanan atas
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{14.5pt}
+
+% Gaya halaman awal bab (plain) -> nomor di tengah bawah
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% ============================================================================
+%                        FORMAT JUDUL BAB & SUBBAB
+% ============================================================================
+% Penomoran Chapter dengan Romawi (BAB I, BAB II, dst)
+\renewcommand{\thechapter}{\Roman{chapter}}
+
+% Font untuk heading utama (14pt, bold)
+\newcommand{\HeadingFont}{\fontsize{14pt}{21pt}\selectfont\bfseries}
+
+% ==== FORMAT CHAPTER (BAB) ====
+% Contoh hasil: "BAB I" (baris 1), "PENDAHULUAN" (baris 2)
+\titleformat{\chapter}[display]
+  {\normalfont\HeadingFont\centering}  % Format: 14pt, bold, tengah
+  {\MakeUppercase{BAB \thechapter}}    % Label: BAB I, BAB II, dst
+  {0pt}                                % Jarak antara label dan judul
+  {\HeadingFont\MakeUppercase}         % Format judul: uppercase, bold, 14pt
+
+% Spacing Chapter: {left}{before-sep}{after-sep}
+\titlespacing*{\chapter}
+  {0pt}              % left margin
+  {0pt}              % space before (dari atas halaman)
+  {1.5\baselineskip} % space after (ke konten berikutnya)
+
+% ==== FORMAT SECTION (Heading 1: 1.1, 1.2, dst) ====
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\titleformat{\section}[block]
+  {\normalfont\bfseries}  % Format: bold, 12pt
+  {\thesection}           % Nomor section
+  {1em}                   % Jarak antara nomor dan judul
+  {}                      % Kode sebelum judul
+
+% Spacing Section
+\titlespacing*{\section}
+  {0pt}              % left margin
+  {1\baselineskip}   % space before
+  {0.5\baselineskip} % space after
+
+% ==== FORMAT SUBSECTION (Heading 2: 1.1.1, 1.1.2, dst) ====
+\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
+\titleformat{\subsection}[block]
+  {\normalfont\bfseries}  % Format: bold, 12pt
+  {\thesubsection}        % Nomor subsection
+  {1em}                   % Jarak antara nomor dan judul
+  {}                      % Kode sebelum judul
+
+% Spacing Subsection
+\titlespacing*{\subsection}
+  {0pt}              % left margin
+  {1\baselineskip}   % space before
+  {0.5\baselineskip} % space after
+
+% ==== FORMAT SUBSUBSECTION (Heading 3: 1.1.1.1, dst) ====
+\renewcommand{\thesubsubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+\titleformat{\subsubsection}[block]
+  {\normalfont\bfseries}  % Format: bold, 12pt
+  {\thesubsubsection}     % Nomor subsubsection
+  {1em}                   % Jarak antara nomor dan judul
+  {}                      % Kode sebelum judul
+
+% Spacing Subsubsection
+\titlespacing*{\subsubsection}
+  {0pt}              % left margin
+  {1\baselineskip}   % space before
+  {0.5\baselineskip} % space after
+
+% ==== FORMAT PARAGRAPH (Heading 4) ====
+\setcounter{secnumdepth}{4}  % Aktifkan penomoran hingga paragraph
+\titleformat{\paragraph}[runin]
+  {\normalfont\bfseries}  % Format: bold, inline dengan teks
+  {\theparagraph}         % Nomor paragraph
+  {1em}                   % Jarak antara nomor dan judul
+  {}                      % Kode sebelum judul
+  [.]                     % Tanda setelah judul (titik)
+
+% Spacing Paragraph
+\titlespacing*{\paragraph}
+  {0pt}              % left margin
+  {1\baselineskip}   % space before
+  {0.5em}            % space after (horizontal karena runin)
+
+% ============================================================================
+%                          INDENTASI PARAGRAF
+% ============================================================================
+% Indent ~4 karakter (1.5em untuk Times 12pt)
+\setlength{\parindent}{1.5em}
+
+% ============================================================================
+%                   JUSTIFY & HYPHENATION
+% ============================================================================
+\setlength{\emergencystretch}{1.5em}
+\AtBeginEnvironment{verbatim}{\singlespacing}
+
+% ============================================================================
+%                 COMMAND RENDER HALAMAN DAFTAR
+% ============================================================================
+\makeatletter
+\newcommand{\RenderListPage}[3][]{%
+  \cleardoublepage
+  \phantomsection
+  \thispagestyle{plain}%
+  \setstretch{1.5}%
+  #1%
+  {\HeadingFont\centering \MakeUppercase{#2}\par}\vspace{\baselineskip}%
+  \noindent\hfill\textbf{Halaman}\par\vspace{0.5\baselineskip}%
+  \begingroup\setstretch{1.5}\@starttoc{#3}\endgroup\par}
+
+\newcommand{\RenderListPageNoSpace}[3][]{%
+  \cleardoublepage
+  \phantomsection
+  \thispagestyle{plain}%
+  \setstretch{1.5}%
+  #1%
+  {\HeadingFont\centering \MakeUppercase{#2}\par}\vspace{\baselineskip}%
+  \noindent\hfill\textbf{Halaman}\par\vspace{0.5\baselineskip}%
+  \begingroup
+  \setstretch{1.5}
+  \let\addvspace\@gobble
+  \@starttoc{#3}%
+  \endgroup\par}
+\makeatother
+
+% ============================================================================
+%                         KONFIGURASI DAFTAR ISI (TOC)
+% ============================================================================
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+\renewcommand{\cftchappresnum}{BAB~}
+\renewcommand{\cftchapaftersnum}{}
+\setlength{\cftchapindent}{0em}
+\setlength{\cftchapnumwidth}{4em}
+
+\renewcommand{\cftchapfont}{\bfseries}
+\renewcommand{\cftchappagefont}{\bfseries}
+\renewcommand{\cftchapleader}{\hfill} % Menghapus titik-titik
+
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftsecleader}{\hfill} % Menghapus titik-titik
+\setlength{\cftsecindent}{2em}
+\setlength{\cftsecnumwidth}{2em}
+
+\renewcommand{\cftsubsecleader}{\hfill} % Menghapus titik-titik
+\setlength{\cftsubsecindent}{4em}
+\setlength{\cftsubsecnumwidth}{3em}
+
+\renewcommand{\cftsubsubsecleader}{\hfill} % Menghapus titik-titik
+\setlength{\cftsubsubsecindent}{7em}
+\setlength{\cftsubsubsecnumwidth}{4em}
+
+\setlength{\cftbeforechapskip}{0pt}
+\setlength{\cftbeforesecskip}{0pt}
+\setlength{\cftbeforesubsecskip}{0pt}
+\setlength{\cftbeforesubsubsecskip}{0pt}
+
+\renewcommand{\cftdotsep}{1}
+
+\addto\captionsindonesian{%
+  \renewcommand{\contentsname}{Daftar Isi}
+  \renewcommand{\listfigurename}{Daftar Gambar}
+  \renewcommand{\listtablename}{Daftar Tabel}
+  \renewcommand{\bibname}{Daftar Pustaka}
+  \renewcommand{\refname}{Daftar Pustaka}
+  \renewcommand{\appendixname}{LAMPIRAN}
+}
+
+\renewcommand{\cfttoctitlefont}{\hfill\HeadingFont}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\HeadingFont}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\HeadingFont}
+\renewcommand{\cftafterlottitle}{\hfill}
+
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{1\baselineskip}
+\setlength{\cftbeforeloftitleskip}{0pt}
+\setlength{\cftafterloftitleskip}{1\baselineskip}
+\setlength{\cftbeforelottitleskip}{0pt}
+\setlength{\cftafterlottitleskip}{1\baselineskip}
+
+% ==== Global: Hapus Titik-titik pada SEMUA daftar (LoF, LoT, dll) ====
+\makeatletter
+\renewcommand{\@dottedtocline}[5]{%
+  \ifnum #1>\c@tocdepth \else
+    \vskip \z@ \@plus.2\p@
+    {\leftskip #2\relax \rightskip \@tocrmarg \parfillskip -\rightskip
+     \parindent #2\relax\@afterindenttrue
+     \interlinepenalty\@M
+     \leavevmode
+     \@tempdima #3\relax
+     \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+     {#4}\nobreak
+     \hfill % Mengganti \leaders\hbox{$\m@th\mkern \@dotsep mu.\mkern \@dotsep mu$}\hfill
+     \nobreak
+     \hb@xt@\@pnumwidth{\hfil\normalfont \normalcolor #5}%
+     \par}%
+  \fi}
+\makeatother
+
+% ==== Standarisasi Daftar Gambar (LoF) ====
+\setlength{\cftfignumwidth}{3.5em}
+\setlength{\cftfigindent}{0em}
+\setlength{\cftbeforefigskip}{0pt}
+\renewcommand{\cftfigleader}{\hfill} % Menghapus titik-titik
+\renewcommand{\cftfigpresnum}{}
+\renewcommand{\cftfigaftersnum}{\space}
+
+% ==== Standarisasi Daftar Tabel (LoT) ====
+\setlength{\cfttabnumwidth}{3.5em}
+\setlength{\cfttabindent}{0em}
+\setlength{\cftbeforetabskip}{0pt}
+\renewcommand{\cfttableader}{\hfill} % Menghapus titik-titik
+\renewcommand{\cfttabpresnum}{}
+\renewcommand{\cfttabaftersnum}{\space}
+
+% ============================================================================
+%                           DAFTAR PERSAMAAN
+% ============================================================================
+\newcommand{\listequationname}{Daftar Persamaan}
+\newcommand{\eqnumberwithparen}{(\arabic{chapter}.\arabic{equation})}
+\newlistof{myequations}{equ}{\listequationname}
+\newcommand{\myequations}[1]{%
+  \addcontentsline{equ}{myequations}{\protect\numberline{\eqnumberwithparen\enspace}#1}\ignorespaces}
+\setlength{\cftmyequationsnumwidth}{4em}
+\renewcommand{\cftmyequationsleader}{\hfill} % Menghapus titik-titik
+\providecommand{\cftmyequationstitlefont}{}
+\providecommand{\cftaftermyequationstitle}{}
+\renewcommand{\cftmyequationstitlefont}{\hfill\HeadingFont}
+\renewcommand{\cftaftermyequationstitle}{\hfill}
+\newcommand{\printlistequations}{%
+  \RenderListPage[\addcontentsline{toc}{chapter}{\MakeUppercase{\listequationname}}]{\listequationname}{equ}}
+
+% ============================================================================
+%                         DAFTAR ALGORITMA/KODE
+% ============================================================================
+\newcommand{\listalgorithmname}{Daftar Kode dan Algoritma}
+\providecommand{\cftloaleader}{\hfill} % Menggunakan providecommand agar aman
+\renewcommand{\cftloaleader}{\hfill}
+\newcommand{\printlistalgorithms}{%
+  \RenderListPageNoSpace[\addcontentsline{toc}{chapter}{\MakeUppercase{\listalgorithmname}}]{\listalgorithmname}{loa}%
+}
+
+% ============================================================================
+%                           DAFTAR LAMPIRAN
+% ============================================================================
+\newcommand{\listappendixname}{Daftar Lampiran}
+\newlistof{myappendices}{apx}{\listappendixname}
+\newcommand{\myappendix}[2]{%
+\addcontentsline{apx}{myappendices}{\protect\numberline{Lampiran #1\enspace}#2}\par}
+\setlength{\cftmyappendicesnumwidth}{7em}
+\renewcommand{\cftmyappendicesleader}{\hfill} % Menghapus titik-titik
+\providecommand{\cftmyappendicestitlefont}{}
+\providecommand{\cftaftermyappendicestitle}{}
+\renewcommand{\cftmyappendicestitlefont}{\hfill\HeadingFont}
+\renewcommand{\cftaftermyappendicestitle}{\hfill}
+\newcommand{\printlistappendices}{%
+  \RenderListPage[\addcontentsline{toc}{chapter}{\MakeUppercase{\listappendixname}}]{\listappendixname}{apx}}
+
+% ============================================================================
+%                      DAFTAR ISTILAH (GLOSARIUM)
+% ============================================================================
+\newcommand{\listtermname}{Daftar Istilah}
+\newcommand{\myterm}[2]{#1 & -- & #2 \\} % Default placeholder
+\newcommand{\printlistterms}{%
+  \cleardoublepage
+  \phantomsection
+  \thispagestyle{plain}%
+  \setstretch{1.5}%
+  \addcontentsline{toc}{chapter}{\MakeUppercase{\listtermname}}%
+  {\HeadingFont\centering \MakeUppercase{\listtermname}\par}\vspace{\baselineskip}%
+  \noindent
+  \begingroup
+  \setstretch{1.5}
+  \renewcommand{\myterm}[2]{##1 & -- & ##2 \\[0.5em]}
+  \begin{xltabular}{\textwidth}{@{} >{\raggedright\arraybackslash}p{3.5cm} @{} c @{\hspace{1em}} X @{}}
+    \input{frontmatter/daftar_istilah}
+  \end{xltabular}
+  \endgroup
+}
+
+% ============================================================================
+%                          GAYA CAPTION INDONESIA
+% ============================================================================
+\captionsetup[figure]{
+  name=Gambar,
+  labelsep=colon,
+  font=small,
+  position=bottom,
+  skip=6pt
+}
+
+\captionsetup[table]{
+  name=Tabel,
+  labelsep=colon,
+  font=small,
+  position=top,
+  skip=6pt,
+  justification=centering
+}
+
+% ============================================================================
+%                      ALGORITMA: PENOMORAN & NAMA
+% ============================================================================
+\renewcommand{\thealgocf}{\arabic{chapter}.\arabic{algocf}}
+\makeatletter
+\@addtoreset{algocf}{chapter}
+\makeatother
+
+\SetAlgorithmName{Algoritma}{Algoritma}{DAFTAR KODE DAN ALGORITMA}
+
+% Spasi 1.0 di dalam body algoritma/pseudocode dan listing
+\AtBeginEnvironment{algorithm}{\singlespacing}
+\AtBeginEnvironment{lstlisting}{\singlespacing}
+
+% ============================================================================
+%                         KODE SUMBER (LISTINGS)
+% ============================================================================
+\makeatletter
+\AtBeginDocument{
+  \@addtoreset{algocf}{chapter}
+  \@addtoreset{lstlisting}{chapter}
+  \renewcommand{\thelstlisting}{\thealgocf}
+  \let\l@lstlisting\l@algocf
+}
+\makeatother
+
+\renewcommand{\lstlistingname}{Kode}
+\renewcommand{\lstlistlistingname}{DAFTAR KODE SUMBER}
+
+% ============================================================================
+%                         TABEL: KONFIGURASI
+% ============================================================================
+\sisetup{
+  detect-weight=true,
+  group-separator={,},
+  group-minimum-digits=4,
+  table-format=3.1,
+}
+
+\setlength{\arrayrulewidth}{0.3pt}
+\renewcommand{\arraystretch}{1.15}
+
+% ============================================================================
+%                     SISTEM PENOMORAN (IEEE STYLE)
+% ============================================================================
+\numberwithin{figure}{chapter}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+
+\numberwithin{table}{chapter}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+
+\numberwithin{equation}{chapter}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+
+% ============================================================================
+%                        FORMAT LAMPIRAN
+% ============================================================================
+\renewcommand{\appendixname}{LAMPIRAN}
+
+\makeatletter
+\g@addto@macro\appendix{%
+  \renewcommand{\chaptername}{\appendixname}%
+  \renewcommand{\thechapter}{\Alph{chapter}}%
+  \titleformat{\chapter}[display]
+  {\normalfont\fontsize{14pt}{16pt}\selectfont\bfseries\centering}
+  {\MakeUppercase{\appendixname~\thechapter}}
+  {0pt}
+  {\MakeUppercase}
+}
+\makeatother

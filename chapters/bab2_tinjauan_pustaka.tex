@@ -1,0 +1,396 @@
+% !TEX root = ../main.tex
+\chapter{TINJAUAN PUSTAKA}
+
+Bab ini menyajikan tinjauan pustaka yang mencakup referensi paket-paket utama yang digunakan dalam penulisan dokumen tesis. Setiap sub-bab menjelaskan fungsi, konfigurasi, dan penggunaan paket secara terstruktur sehingga dapat dijadikan acuan dalam penulisan konten tesis.
+
+\section{Pengaturan Halaman dan Font}
+
+Pengaturan tata letak halaman dan jenis font merupakan aspek fundamental dalam penulisan tesis. Paket \texttt{geometry} digunakan untuk mengatur margin halaman sesuai panduan UDINUS, yaitu margin kiri 4~cm, kanan 2,5~cm, atas 3~cm, dan bawah 3~cm. Margin kiri yang lebih lebar berfungsi sebagai ruang jilid. Paket ini dimuat dengan opsi \texttt{a4paper} dan nilai margin seperti pada Tabel~\ref{tab:margin}.
+
+\begin{table}[h]
+  \centering
+  \caption{Spesifikasi Margin Halaman}
+  \label{tab:margin}
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{lc}
+    \toprule
+    \textbf{Posisi} & \textbf{Jarak} \\
+    \midrule
+    Kiri & 4~cm \\
+    Kanan & 2,5~cm \\
+    Atas & 3~cm \\
+    Bawah & 3~cm \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table}
+
+Paket \texttt{fontspec} digunakan untuk mengatur font utama dokumen menjadi Times New Roman, sesuai dengan panduan institusi. Paket ini hanya tersedia pada mesin XeLaTeX dan LuaLaTeX serta tidak berfungsi pada pdflatex. Font matematika diatur menggunakan paket \texttt{unicode-math} dengan font Latin Modern Math sebagai pendukung penulisan simbol-simbol matematika.
+
+Spasi baris diatur dengan paket \texttt{setspace} menggunakan spasi 1,5 (\texttt{\textbackslash onehalfspacing}) sesuai standar penulisan tesis. Paket \texttt{indentfirst} digunakan untuk memastikan paragraf pertama setiap section mengalami indentasi. Paket \texttt{enumitem} menyediakan kustomisasi lingkungan daftar \texttt{itemize} dan \texttt{enumerate}, termasuk pengaturan jarak antar item dan posisi indentasi.
+
+Tabel~\ref{tab:paket-halaman} merangkum paket-paket yang digunakan dalam pengaturan halaman dan font.
+
+\begin{table}[h]
+  \centering
+  \caption{Paket Pengaturan Halaman dan Font}
+  \label{tab:paket-halaman}
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{lll}
+    \toprule
+    \textbf{Paket} & \textbf{Fungsi} & \textbf{Opsi Kunci} \\
+    \midrule
+    \texttt{geometry} & Margin kertas & \texttt{a4paper, left=4cm, right=2.5cm, top=3cm, bottom=3cm} \\
+    \texttt{fontspec} & Font sistem & \texttt{\textbackslash setmainfont\{Times New Roman\}} \\
+    \texttt{unicode-math} & Font matematika & \texttt{\textbackslash setmathfont\{Latin Modern Math\}} \\
+    \texttt{setspace} & Spasi baris & \texttt{\textbackslash onehalfspacing} \\
+    \texttt{indentfirst} & Indent paragraf pertama & -- \\
+    \texttt{enumitem} & Kustomisasi daftar & \texttt{leftmargin=*, itemsep=0.5em} \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table}
+
+\section{Struktur dan Tata Letak Dokumen}
+
+Struktur dokumen tesis terdiri dari beberapa tingkatan judul yang diatur oleh paket \texttt{titlesec}. Judul BAB menggunakan format \texttt{display} dengan dua baris: baris pertama menampilkan ``BAB I'', ``BAB II'', dan seterusnya, sedangkan baris kedua menampilkan judul bab dalam huruf kapital. Penomoran bab menggunakan angka Romawi melalui perintah \texttt{\textbackslash renewcommand\{\textbackslash thechapter\}\{\textbackslash Roman\{chapter\}\}}.
+
+Format judul section dan subsection menggunakan gaya \texttt{block} dengan teks tebal dan penomoran angka arab (misalnya 1.1, 1.1.1). Tabel~\ref{tab:heading-format} menyajikan format heading yang tersedia.
+
+\begin{table}[h]
+  \centering
+  \caption{Format Heading dalam Template}
+  \label{tab:heading-format}
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{lll}
+    \toprule
+    \textbf{Tingkat} & \textbf{Perintah} & \textbf{Format} \\
+    \midrule
+    BAB & \texttt{\textbackslash chapter\{\dots\}} & BAB I, PENDAHULUAN (14pt, bold, tengah) \\
+    Section & \texttt{\textbackslash section\{\dots\}} & 1.1 (12pt, bold, kiri) \\
+    Subsection & \texttt{\textbackslash subsection\{\dots\}} & 1.1.1 (12pt, bold, kiri) \\
+    Subsubsection & \texttt{\textbackslash subsubsection\{\dots\}} & 1.1.1.1 (12pt, bold, kiri) \\
+    Paragraph & \texttt{\textbackslash paragraph\{\dots\}} & \textit{run-in} dengan teks \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table}
+
+Header dan footer diatur menggunakan paket \texttt{fancyhdr}. Halaman biasa menampilkan nomor halaman di kanan atas, sedangkan halaman awal bab (gaya \texttt{plain}) menampilkan nomor halaman di tengah bawah. Paket \texttt{etoolbox} digunakan untuk menyediakan hook kustomisasi seperti \texttt{\textbackslash AtBeginEnvironment} dan \texttt{\textbackslash g@addto@macro} yang dimanfaatkan untuk memodifikasi perilaku environment tertentu.
+
+Daftar Isi (TOC), Daftar Gambar (LoF), dan Daftar Tabel (LoT) dikustomisasi melalui paket \texttt{tocloft}. Setiap entri bab dalam TOC diberi awalan ``BAB~'' dengan format teks tebal. Titik-titik pemandu (\textit{leader dots}) pada seluruh daftar dihilangkan dengan mendefinisikan ulang perintah \texttt{\textbackslash @dottedtocline} sehingga nomor halaman rata kanan tanpa pemisah titik. Indentasi setiap tingkat diatur sesuai kedalaman hierarki bab, section, subsection, dan subsubsection.
+
+\section{Bahasa dan Penamaan}
+
+Dokumen tesis ditulis dalam Bahasa Indonesia dengan dukungan paket \texttt{babel}. Paket \texttt{babel} dimuat dengan opsi \texttt{english} sebagai bahasa utama, kemudian \texttt{indonesian} ditambahkan melalui \texttt{\textbackslash babelprovide[main]\{indonesian\}}. Bahasa Indonesia diaktifkan setelah \texttt{\textbackslash begin\{document\}} melalui perintah \texttt{\textbackslash selectlanguage\{indonesian\}}.
+
+Penamaan elemen dokumen seperti ``Daftar Isi'', ``Daftar Gambar'', dan ``Daftar Tabel'' diatur melalui perintah \texttt{\textbackslash addto\textbackslash captionsindonesian}. Tabel~\ref{tab:caption-names} menyajikan pemetaan penamaan yang digunakan.
+
+\begin{table}[h]
+  \centering
+  \caption{Penamaan Elemen dalam Bahasa Indonesia}
+  \label{tab:caption-names}
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{ll}
+    \toprule
+    \textbf{Elemen} & \textbf{Nama} \\
+    \midrule
+    Daftar Isi & \texttt{contentsname} \\
+    Daftar Gambar & \texttt{listfigurename} \\
+    Daftar Tabel & \texttt{listtablename} \\
+    Daftar Pustaka & \texttt{bibname} \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table}
+
+\section{Visual: Gambar dan Diagram}
+
+Penyisipan gambar dalam dokumen tesis menggunakan paket \texttt{graphicx}. Gambar dapat disisipkan dengan berbagai format seperti PNG, JPG, dan PDF. Ukuran gambar diatur melalui parameter \texttt{width}, \texttt{height}, atau \texttt{scale}. Setiap gambar ditempatkan dalam lingkungan \texttt{figure} dengan caption dan label untuk rujukan silang.
+
+Struktur dasar penyisipan gambar adalah sebagai berikut:
+\begin{verbatim}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{path/to/image.png}
+  \caption{Deskripsi gambar.}
+  \label{fig:label-gambar}
+\end{figure}
+\end{verbatim}
+
+Gambar~\ref{fig:contoh-grafik} menampilkan contoh grafik fungsi yang dibuat menggunakan paket \texttt{tikz} dan \texttt{pgfplots}. Paket \texttt{tikz} menyediakan kemampuan pembuatan diagram vektor langsung dalam dokumen, sedangkan \texttt{pgfplots} digunakan untuk membuat grafik fungsi matematika.
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[scale=0.85]
+    \draw[->] (-0.5,0) -- (4.5,0) node[below] {$x$};
+    \draw[->] (0,-0.5) -- (0,4.5) node[left] {$y$};
+    \draw[help lines, step=0.5cm, lightgray] (0,0) grid (4,4);
+    \foreach \x in {1,2,3,4}
+      \draw (\x,0) -- (\x,-0.1) node[below] {\small \x};
+    \foreach \y in {1,2,3,4}
+      \draw (0,\y) -- (-0.1,\y) node[left] {\small \y};
+    \draw[thick, blue, domain=0:4, samples=50]
+      plot (\x, {0.25*\x*\x + 0.5*\x + 0.5})
+      node[right] {\small $y = 0{,}25x^{2} + 0{,}5x + 0{,}5$};
+  \end{tikzpicture}
+  \caption{Contoh grafik fungsi kuadrat menggunakan TikZ.}
+  \label{fig:contoh-grafik}
+\end{figure}
+
+Paket \texttt{caption} digunakan untuk mengatur format caption gambar dan tabel. Caption gambar ditempatkan di bawah (\texttt{position=bottom}) dengan label ``Gambar'' dan pemisah titik dua. Paket \texttt{pdfpages} digunakan untuk menyisipkan halaman dari dokumen PDF eksternal, terutama untuk keperluan lampiran.
+
+Tabel~\ref{tab:paket-visual-gambar} merangkum paket-paket untuk elemen visual gambar dan diagram.
+
+\begin{table}[h]
+  \centering
+  \caption{Paket Visual: Gambar dan Diagram}
+  \label{tab:paket-visual-gambar}
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{lll}
+    \toprule
+    \textbf{Paket} & \textbf{Fungsi} & \textbf{Contoh Penggunaan} \\
+    \midrule
+    \texttt{graphicx} & Sisip gambar raster/vektor & \texttt{\textbackslash includegraphics[width=...]\{file\}} \\
+    \texttt{pdfpages} & Sisip halaman PDF & \texttt{\textbackslash includepdf[pages=-]\{file\}} \\
+    \texttt{caption} & Format caption & \texttt{\textbackslash captionsetup[figure]\{name=Gambar\}} \\
+    \texttt{tikz} & Diagram vektor & \texttt{\textbackslash begin\{tikzpicture\}...\textbackslash end\{tikzpicture\}} \\
+    \texttt{pgfplots} & Grafik fungsi & \texttt{\textbackslash addplot[...]\{...\}} \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table}
+
+\section{Visual: Tabel}
+
+Penulisan tabel dalam tesis menggunakan beberapa paket pendukung untuk menghasilkan tampilan yang profesional. Paket \texttt{booktabs} digunakan untuk menghasilkan garis horizontal berkualitas dengan tiga jenis garis: \texttt{\textbackslash toprule} (garis tebal di atas), \texttt{\textbackslash midrule} (garis tipis pemisah header), dan \texttt{\textbackslash bottomrule} (garis tebal di bawah). Tabel tanpa garis vertikal merupakan standar penulisan ilmiah modern.
+
+Tabel~\ref{tab:contoh-tabel} menampilkan contoh tabel sederhana dengan format \texttt{booktabs}.
+
+\begin{table}[h]
+  \centering
+  \caption{Contoh Tabel dengan Format Booktabs}
+  \label{tab:contoh-tabel}
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Model} & \textbf{Akurasi} & \textbf{Presisi} & \textbf{Recall} \\
+    \midrule
+    Model A & 0,92 & 0,89 & 0,91 \\
+    Model B & 0,88 & 0,85 & 0,87 \\
+    Model C & 0,95 & 0,93 & 0,94 \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table}
+
+Untuk tabel yang membutuhkan lebar penuh halaman, paket \texttt{tabularx} menyediakan lingkungan \texttt{tabularx} dengan kolom yang dapat menyesuaikan lebar secara otomatis (\texttt{X} coltype). Paket \texttt{xltabular} menggabungkan fungsi \texttt{tabularx} dengan \texttt{longtable} untuk tabel multi-halaman yang memiliki lebar kolom fleksibel. Paket \texttt{siunitx} digunakan untuk perataan angka desimal dalam tabel dengan opsi \texttt{table-format} yang menentukan jumlah digit sebelum dan sesudah koma.
+
+Tabel~\ref{tab:paket-visual-tabel} merangkum paket-paket untuk pembuatan tabel.
+
+\begin{table}[h]
+  \centering
+  \caption{Paket Visual: Tabel}
+  \label{tab:paket-visual-tabel}
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{lll}
+    \toprule
+    \textbf{Paket} & \textbf{Fungsi} & \textbf{Opsi Kunci} \\
+    \midrule
+    \texttt{booktabs} & Garis tabel profesional & \texttt{\textbackslash toprule}, \texttt{\textbackslash midrule}, \texttt{\textbackslash bottomrule} \\
+    \texttt{tabularx} & Kolom fleksibel lebar & \texttt{\{>\textbackslash raggedright... X @{\}}} \\
+    \texttt{xltabular} & Tabel multi-halaman fleksibel & Menggabungkan \texttt{tabularx} dan \texttt{longtable} \\
+    \texttt{siunitx} & Perataan angka desimal & \texttt{table-format=3.1} \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table}
+
+\section{Penulisan Algoritma}
+
+Penulisan pseudocode dalam dokumen tesis menggunakan paket \texttt{algorithm2e} yang dimuat dengan opsi \texttt{ruled}, \texttt{vlined}, \texttt{linesnumbered}, dan \texttt{resetcount}. Opsi \texttt{ruled} menempatkan caption di bagian atas algoritma dengan garis pembatas horizontal. Opsi \texttt{vlined} menampilkan garis vertikal yang menghubungkan struktur blok bersarang sehingga alur logika lebih mudah diikuti. Opsi \texttt{linesnumbered} memberikan nomor baris secara otomatis, sedangkan \texttt{resetcount} mereset penomoran algoritma pada setiap awal bab.
+
+Penomoran algoritma mengikuti format nomor bab dan nomor urut, misalnya Algoritma 2.1 untuk algoritma pertama pada Bab~II. Setiap algoritma ditempatkan dalam lingkungan \texttt{algorithm} diikuti dengan \texttt{\textbackslash caption} dan \texttt{\textbackslash label} untuk rujukan silang.
+
+Tabel~\ref{tab:perintah-algoritma} menyajikan perintah-perintah utama yang tersedia dalam paket \texttt{algorithm2e}.
+
+\begin{table}[h]
+  \centering
+  \caption{Perintah Utama Algorithm2e}
+  \label{tab:perintah-algoritma}
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{llp{6cm}}
+    \toprule
+    \textbf{Perintah} & \textbf{Fungsi} & \textbf{Contoh} \\
+    \midrule
+    \texttt{\textbackslash KwInput\{\}} & Input algoritma & \texttt{\textbackslash KwInput\{Citra masukan\}} \\
+    \texttt{\textbackslash KwOutput\{\}} & Output algoritma & \texttt{\textbackslash KwOutput\{Label kelas\}} \\
+    \texttt{\textbackslash If\{kondisi\}\{blok\}} & Kondisional \textit{if} & \texttt{\textbackslash If\{x > 0\}\{positif\}} \\
+    \texttt{\textbackslash eIf\{k\}\{b1\}\{b2\}} & \textit{If-else} & \texttt{\textbackslash eIf\{x>0\}\{pos\}\{neg\}} \\
+    \texttt{\textbackslash While\{kond\}\{blok\}} & Perulangan \textit{while} & \texttt{\textbackslash While\{i < n\}\{i++\}} \\
+    \texttt{\textbackslash For\{iter\}\{blok\}} & Perulangan \textit{for} & \texttt{\textbackslash For\{i=1 \textbackslash KwTo n\}\{...\}} \\
+    \texttt{\textbackslash ForEach\{item\}\{blok\}} & \textit{Foreach} & \texttt{\textbackslash ForEach\{data \}}\\
+    \texttt{\textbackslash Return\{\}} & Nilai balik & \texttt{\textbackslash Return\{hasil\}} \\
+    \texttt{\textbackslash Comment\{\}} & Komentar & \texttt{\textbackslash Comment\{increment i\}} \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table}
+
+Algoritma~\ref{alg:pencarian-linear} menampilkan contoh pseudocode untuk algoritma pencarian linear yang memeriksa setiap elemen array secara berurutan.
+
+\begin{algorithm}[h]
+  \caption{Pencarian Linear}
+  \label{alg:pencarian-linear}
+  \KwInput{Array $A$ dengan $n$ elemen, nilai target $x$}
+  \KwOutput{Indeks elemen jika ditemukan, $-1$ jika tidak}
+  \For{$i \leftarrow 0$ \KwTo $n-1$}{
+    \If{$A[i] = x$}{
+      \Return{$i$}\;
+    }
+  }
+  \Return{$-1$}\;
+\end{algorithm}
+
+\section{Penulisan Kode Sumber}
+
+Kode sumber dalam dokumen tesis ditampilkan menggunakan paket \texttt{listings} yang menyediakan \textit{syntax highlighting} untuk berbagai bahasa pemrograman. Template ini mendukung bahasa Python, JavaScript, Java, dan PromptLLM melalui \textit{style} yang telah dikonfigurasi.
+
+Tabel~\ref{tab:listings-style} menyajikan style yang tersedia beserta deskripsinya.
+
+\begin{table}[h]
+  \centering
+  \caption{Style Listings yang Tersedia}
+  \label{tab:listings-style}
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{lll}
+    \toprule
+    \textbf{Style} & \textbf{Bahasa} & \textbf{Penggunaan} \\
+    \midrule
+    \texttt{defaultstyle} & Umum & Style dasar untuk bahasa tanpa style khusus \\
+    \texttt{pythonstyle} & Python & Skrip machine learning, pengolahan data \\
+    \texttt{javascriptstyle} & JavaScript & Kode web, fungsi async \\
+    \texttt{javastyle} & Java & Kode OOP, class, method \\
+    \texttt{promptstyle} & PromptLLM & Prompt ke model bahasa besar (LLM) \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table}
+
+Setiap \textit{style} menerapkan konfigurasi warna yang telah didefinisikan melalui paket \texttt{xcolor}. Warna untuk komentar, kata kunci, string, dan latar belakang diatur secara terpisah agar kode mudah dibaca. Kode~\ref{lst:python-contoh} menampilkan contoh kode Python dengan style \texttt{pythonstyle}.
+
+\begin{lstlisting}[style=pythonstyle, caption={Contoh Fungsi Python}, label={lst:python-contoh}]
+def hitung_rata_rata(data):
+    if not data:
+        raise ValueError("Data tidak boleh kosong")
+    total = sum(data)
+    return total / len(data)
+
+nilai = [85, 90, 78, 92, 88]
+print(f"Rata-rata: {hitung_rata_rata(nilai)}")
+\end{lstlisting}
+
+Penomoran kode sumber diselaraskan dengan penomoran algoritma melalui mekanisme \textit{counter sharing}. Ketika perintah \texttt{\textbackslash begin\{lstlisting\}} digunakan, \textit{counter} \texttt{algocf} yang bertambah, dan nilai tersebut disalin ke \texttt{lstlisting}. Akibatnya, algoritma dan kode sumber memiliki nomor urut yang berkesinambungan (misalnya Algoritma 2.1, Kode~2.2, Algoritma 2.3) dan keduanya tercantum dalam satu daftar yang sama, yaitu Daftar Kode dan Algoritma.
+
+\section{Penulisan Persamaan Matematika}
+
+Penulisan persamaan matematika menggunakan paket \texttt{amsmath} yang menyediakan berbagai lingkungan untuk menampilkan persamaan. Persamaan dengan penomoran menggunakan lingkungan \texttt{equation}, sedangkan persamaan tanpa penomoran menggunakan \texttt{\textbackslash[...\textbackslash]}.
+
+Setiap persamaan yang perlu dirujuk dalam teks harus diberi label melalui \texttt{\textbackslash label\{eq:...\}} dan dapat dirujuk menggunakan \texttt{\textbackslash eqref\{eq:...\}}. Penomoran persamaan mengikuti format \texttt{nomorbab.nomorurut}, misalnya Persamaan~(2.1) untuk persamaan pertama pada Bab~II.
+
+\begin{equation}
+  f(x) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+  \label{eq:gaussian}
+\end{equation}
+
+Persamaan~\eqref{eq:gaussian} merupakan fungsi distribusi normal Gaussian dengan parameter $\mu$ (rata-rata) dan $\sigma$ (standar deviasi). Penulisan simbol matematika dalam teks (\textit{inline math}) menggunakan tanda \texttt{\$...\$}, seperti $\alpha$, $\beta$, dan $\gamma$.
+
+Untuk menambahkan persamaan ke dalam Daftar Persamaan, digunakan perintah \texttt{\textbackslash myequations\{...\}} setelah lingkungan \texttt{equation}. Perintah ini didefinisikan melalui paket \texttt{tocloft} dengan membuat daftar baru (\textit{new listof}) yang diberi ekstensi \texttt{equ}.
+
+\begin{equation}
+  \nabla J(\theta) = \frac{\partial}{\partial\theta} J(\theta)
+\end{equation}
+\myequations{Persamaan Gradien Fungsi Biaya}
+
+Tabel~\ref{tab:math-commands} menyajikan perintah-perintah penting untuk penulisan persamaan.
+
+\begin{table}[h]
+  \centering
+  \caption{Perintah Penulisan Persamaan}
+  \label{tab:math-commands}
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{llp{5cm}}
+    \toprule
+    \textbf{Perintah} & \textbf{Fungsi} & \textbf{Contoh} \\
+    \midrule
+    \texttt{\textbackslash [ ... \textbackslash ]} & Display math tanpa nomor & $\displaystyle \sum_{i=1}^{n} x_i$ \\
+    \texttt{\textbackslash begin\{equation\}} & Display math dengan nomor & Persamaan~\eqref{eq:gaussian} \\
+    \texttt{\textbackslash label\{eq:...\}} & Label persamaan & \texttt{\textbackslash label\{eq:loss\}} \\
+    \texttt{\textbackslash eqref\{eq:...\}} & Rujuk persamaan & \texttt{\textbackslash eqref\{eq:loss\}} \\
+    \texttt{\textbackslash myequations\{...\}} & Tambah ke daftar & \texttt{\textbackslash myequations\{Fungsi Loss\}} \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table}
+
+\section{Sistem Referensi dan Sitasi}
+
+Sistem referensi dan sitasi dalam template ini menggunakan paket \texttt{biblatex} dengan \textit{backend} Biber dan \textit{style} IEEE. Format IEEE menggunakan penomoran angka dalam kurung siku, seperti \cite{Zhou2025} untuk sitasi pertama. Daftar Pustaka disusun berdasarkan urutan kemunculan sitasi (\textit{sorting=none}).
+
+Paket \texttt{biblatex} dimuat dengan opsi \texttt{maxbibnames=99} untuk menampilkan seluruh nama penulis tanpa singkatan ``et al.'' pada daftar pustaka. Metadata seperti ISBN dan URL disembunyikan untuk menjaga kerapihan tampilan (\texttt{isbn=false, url=false}). Tahun publikasi ditampilkan tanpa bulan dan hari (\texttt{date=year}).
+
+Tabel~\ref{tab:sitasi-perintah} menyajikan perintah-perintah sitasi yang tersedia.
+
+\begin{table}[h]
+  \centering
+  \caption{Perintah Sitasi dengan Biblatex}
+  \label{tab:sitasi-perintah}
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{llp{5cm}}
+    \toprule
+    \textbf{Perintah} & \textbf{Hasil} & \textbf{Keterangan} \\
+    \midrule
+    \texttt{\textbackslash cite\{key\}} & \cite{Zhou2025} & Sitasi dalam kurung siku \\
+    \texttt{\textbackslash textcite\{key\}} & \textcite{Zhou2025} & Nama penulis di luar kurung \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table}
+
+Paket \texttt{hyperref} digunakan untuk membuat tautan internal pada rujukan silang, sitasi, dan daftar isi. Opsi \texttt{hidelinks} menghilangkan kotak berwarna di sekitar tautan sehingga tampilan dokumen tetap bersih. Paket \texttt{cleveref} dimuat setelah \texttt{hyperref} dan menyediakan perintah \texttt{\textbackslash cref} yang secara otomatis menambahkan nama elemen yang dirujuk, seperti ``Gambar~\ref{fig:contoh-grafik}'' atau ``\cref{fig:contoh-grafik}''.
+
+Panduan kompilasi untuk menghasilkan sitasi yang benar adalah sebagai berikut:
+\begin{enumerate}
+  \item XeLaTeX --- kompilasi pertama untuk menghasilkan file \texttt{.bcf}
+  \item Biber --- memproses bibliografi dan menghasilkan file \texttt{.bbl}
+  \item XeLaTeX --- kompilasi kedua untuk memasukkan referensi
+  \item XeLaTeX --- kompilasi ketiga untuk memperbarui seluruh rujukan silang
+\end{enumerate}
+
+\section{Daftar Kustom}
+
+Template ini menyediakan beberapa daftar kustom di luar Daftar Isi, Daftar Gambar, dan Daftar Tabel standar. Setiap daftar kustom dibuat menggunakan mekanisme \texttt{\textbackslash newlistof} dari paket \texttt{tocloft} dan dirender menggunakan perintah \texttt{\textbackslash RenderListPage} atau \texttt{\textbackslash RenderListPageNoSpace}.
+
+Tabel~\ref{tab:daftar-kustom} menyajikan seluruh daftar kustom yang tersedia.
+
+\begin{table}[h]
+  \centering
+  \caption{Daftar Kustom dalam Template}
+  \label{tab:daftar-kustom}
+  \begin{adjustbox}{max width=\textwidth}
+  \begin{tabular}{lllp{4cm}}
+    \toprule
+    \textbf{Daftar} & \textbf{Ekstensi} & \textbf{Perintah Isi} & \textbf{Perintah Cetak} \\
+    \midrule
+    Persamaan & \texttt{equ} & \texttt{\textbackslash myequations\{...\}} & \texttt{\textbackslash printlistequations} \\
+    Kode/Algoritma & \texttt{loa} & \texttt{\textbackslash caption} & \texttt{\textbackslash printlistalgorithms} \\
+    Lampiran & \texttt{apx} & \texttt{\textbackslash myappendix\{A\}\{...\}} & \texttt{\textbackslash printlistappendices} \\
+    Istilah & (langsung) & \texttt{\textbackslash myterm\{istilah\}\{definisi\}} & \texttt{\textbackslash printlistterms} \\
+    \bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table}
+
+Daftar Istilah (\textit{glosarium}) menggunakan lingkungan \texttt{xltabular} untuk menampilkan istilah dan definisinya dalam format dua kolom dengan lebar yang disesuaikan. Data istilah disimpan dalam file terpisah \texttt{frontmatter/daftar\_istilah} dan diinput ke dalam lingkungan tabel. Perintah \texttt{\textbackslash myterm\{istilah\}\{definisi\}} digunakan untuk mendefinisikan setiap entri, kemudian dirender melalui \texttt{\textbackslash printlistterms}.
+
+Seluruh daftar kustom menerapkan format yang konsisten: judul daftar dicetak dengan huruf kapital menggunakan \texttt{\textbackslash HeadingFont}, kolom kanan menampilkan kata ``Halaman'', dan entri daftar ditampilkan tanpa titik pemandu sesuai konfigurasi global template.

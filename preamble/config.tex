@@ -1,0 +1,74 @@
+% !TEX root = ../main.tex
+% ============================================================================
+%                   SUPPRESS BIBLATEX & FONT WARNINGS
+% ============================================================================
+\WarningFilter{biblatex}{Using fallback definition for}
+\WarningFilter{biblatex}{Bibliography string}
+\WarningFilter{font}{Missing character}
+
+% ============================================================================
+%                     BIBLATEX FORMAT OVERRIDES
+% ============================================================================
+\renewcommand*{\mkbibnamefamily}[1]{#1}
+\renewcommand*{\mkbibnamegiven}[1]{#1}
+\renewcommand*{\mkbibnameprefix}[1]{#1}
+\renewcommand*{\mkbibnamesuffix}[1]{#1}
+\renewcommand*{\mkbibacro}[1]{#1}
+\renewcommand*{\mkbibemph}[1]{\textit{#1}}
+\renewcommand*{\mkbibquote}[1]{``#1''}
+
+\renewcommand*{\mkbibbold}[1]{#1}
+\renewcommand*{\mkbibitalic}[1]{\textit{#1}}
+
+\renewcommand*{\finalnamedelim}{\addspace and\space}
+\renewcommand*{\multinamedelim}{\addcomma\space}
+
+\DeclareFieldFormat{labelnumberwidth}{[#1]}
+\DeclareFieldFormat{shorthandwidth}{#1}
+\DeclareFieldFormat*{citetitle}{#1}
+\DeclareFieldFormat*{title}{``#1''}
+\DeclareFieldFormat[article,periodical]{volume}{#1}
+\DeclareFieldFormat[article,periodical]{number}{(#1)}
+\DeclareFieldFormat{pages}{pp\adddot\space#1}
+\DeclareFieldFormat{journaltitle}{\textit{#1}}
+\DeclareFieldFormat{booktitle}{\textit{#1}}
+\DeclareFieldFormat{maintitle}{\textit{#1}}
+
+\DeclareFieldFormat{date}{#1}
+\DeclareFieldFormat{year}{#1}
+\DeclareFieldFormat{urldate}{#1}
+
+\AtEveryBibitem{%
+  \clearfield{note}%
+  \clearfield{month}%
+  \clearfield{day}%
+}
+
+\renewbibmacro{in:}{%
+  \printtext{in\addspace}%
+}
+
+\renewcommand*{\newunitpunct}{\addcomma\space}
+\renewcommand*{\finentrypunct}{\addperiod}
+
+\DeclareFieldFormat{publisher}{#1}
+\DeclareFieldFormat{location}{#1}
+\DeclareFieldFormat{chapter}{#1}
+\DeclareFieldFormat{type}{#1}
+\DeclareFieldFormat{version}{#1}
+\DeclareFieldFormat{note}{#1}
+
+% ============================================================================
+%                    CLEVEREF: NAMA BAHASA INDONESIA
+% ============================================================================
+\crefname{figure}{Gambar}{Gambar}
+\Crefname{figure}{Gambar}{Gambar}
+\crefname{table}{Tabel}{Tabel}
+\Crefname{table}{Tabel}{Tabel}
+\crefname{equation}{Persamaan}{Persamaan}
+\Crefname{equation}{Persamaan}{Persamaan}
+\crefname{algocf}{Algoritma}{Algoritma}
+\Crefname{algocf}{Algoritma}{Algoritma}
+
+\crefname{codenumber}{Algoritma}{Algoritma}
+\Crefname{codenumber}{Algoritma}{Algoritma}
