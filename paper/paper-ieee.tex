@@ -5,6 +5,12 @@
 \usepackage{cite}
 \usepackage{amsmath,amssymb}
 \usepackage{hyperref}
+\usepackage{float}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{algorithmic}
+\usepackage{listings}
+\usepackage{subfig}
 
 \hypersetup{
     colorlinks=true,
@@ -12,6 +18,8 @@
     citecolor=black,
     urlcolor=blue
 }
+
+\hyphenation{op-tical net-works semi-conduc-tor}
 
 \begin{document}
 
@@ -28,34 +36,137 @@
 \maketitle
 
 \begin{abstract}
-Abstrak paper ini.
+Abstrak paper ini berisi latar belakang, tujuan, metode, hasil utama, dan kesimpulan secara singkat dalam bahasa Inggris. Abstrak ditulis dalam satu paragraf tidak lebih dari 250 kata.
 \end{abstract}
 
 \begin{IEEEkeywords}
-kata kunci, dipisah, koma
+kata kunci, dipisah, koma, maksimal lima
 \end{IEEEkeywords}
 
 \section{Pendahuluan}
 \label{sec:pendahuluan}
 
-Tulis pendahuluan di sini.
+\IEEEPARstart{P}{enelitian} ini membahas latar belakang permasalahan yang mendasari dilakukannya penelitian. Uraikan konteks permasalahan, rumusan masalah, tujuan penelitian, dan manfaat penelitian. Sertakan juga tinjauan singkat penelitian terkait yang relevan \cite{ref1}.
+
+\subsection{Latar Belakang}
+\label{subsec:latar_belakang}
+
+Tulis latar belakang di sini yang menjelaskan motivasi dilakukannya penelitian.
+
+\subsection{Rumusan Masalah}
+\label{subsec:rumusan_masalah}
+
+Tulis rumusan masalah yang akan diselesaikan dalam penelitian ini.
+
+\subsection{Tujuan Penelitian}
+\label{subsec:tujuan}
+
+Tulis tujuan yang ingin dicapai.
+
+\section{Tinjauan Pustaka}
+\label{sec:tinjauan_pustaka}
+
+Uraikan teori-teori dasar dan penelitian terkait yang mendukung penelitian ini \cite{ref2}.
 
 \section{Metode Penelitian}
 \label{sec:metode}
 
-Tulis metode di sini.
+Jelaskan metode yang digunakan dalam penelitian secara sistematis.
+
+\subsection{Alur Penelitian}
+\label{subsec:alur}
+
+Gambarkan alur atau tahapan penelitian yang dilakukan.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3.5in]{example-image}
+\caption{Diagram alur penelitian.}
+\label{fig:alur}
+\end{figure}
+
+\subsection{Data Penelitian}
+\label{subsec:data}
+
+Jelaskan sumber data, jenis data, dan cara pengumpulan data.
+
+\subsection{Metode yang Diusulkan}
+\label{subsec:metode_diusulkan}
+
+Jelaskan metode atau algoritma yang diusulkan dalam penelitian. Jika ada pseudocode, dapat dituliskan sebagai berikut.
+
+\begin{figure}[!t]
+\centering
+\framebox[\columnwidth]{\parbox{0.9\columnwidth}{
+\raggedright
+\textbf{Algoritma 1} Algoritma yang diusulkan \\
+\vspace{4pt}
+\textbf{Input:} Data masukan \\
+\textbf{Output:} Keluaran \\
+\vspace{4pt}
+1. Inisialisasi parameter \\
+2. \textbf{for} setiap data \textbf{do} \\
+3. \hspace{1em} Proses data \\
+4. \hspace{1em} \textbf{if} kondisi terpenuhi \textbf{then} \\
+5. \hspace{2em} Lakukan langkah A \\
+6. \hspace{1em} \textbf{else} \\
+7. \hspace{2em} Lakukan langkah B \\
+8. \hspace{1em} \textbf{end if} \\
+9. \textbf{end for} \\
+10. Kembalikan hasil
+}}
+\caption{Pseudocode metode yang diusulkan.}
+\label{fig:algoritma}
+\end{figure}
 
 \section{Hasil dan Pembahasan}
 \label{sec:hasil}
 
-Tulis hasil di sini.
+Sajikan hasil eksperimen atau pengujian dan pembahasannya.
+
+\subsection{Hasil Pengujian}
+\label{subsec:hasil_pengujian}
+
+Tampilkan hasil pengujian dalam bentuk tabel dan grafik.
+
+\begin{table}[!t]
+\centering
+\caption{Hasil pengujian metode yang diusulkan.}
+\label{tbl:hasil}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Metode} & \textbf{Akurasi} & \textbf{Presisi} & \textbf{Recall} \\
+\hline
+Metode A & 95.2\% & 94.8\% & 95.5\% \\
+Metode B & 93.1\% & 92.7\% & 93.4\% \\
+Metode C & 91.5\% & 91.2\% & 91.8\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3.3in]{example-image}
+\caption{Grafik perbandingan hasil pengujian.}
+\label{fig:grafik}
+\end{figure}
+
+\subsection{Pembahasan}
+\label{subsec:pembahasan}
+
+Analisis dan interpretasi hasil yang diperoleh. Bandingkan dengan penelitian sebelumnya.
 
 \section{Kesimpulan}
 \label{sec:kesimpulan}
 
-Tulis kesimpulan di sini.
+Tulis kesimpulan dari penelitian yang menjawab tujuan penelitian. Sertakan juga saran untuk penelitian selanjutnya.
+
+\section*{Ucapan Terima Kasih}
+\label{sec:ucapan_terima_kasih}
+
+Sampaikan ucapan terima kasih kepada pihak-pihak yang mendukung penelitian.
 
 \bibliographystyle{IEEEtran}
-\bibliography{references}
+\bibliography{../references}
 
 \end{document}
