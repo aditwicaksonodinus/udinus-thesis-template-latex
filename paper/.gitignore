@@ -22,3 +22,5 @@
 *.equ
 *.loa
 *.apx
+*.pdf
+output/
